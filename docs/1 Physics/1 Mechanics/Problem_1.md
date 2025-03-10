@@ -128,6 +128,7 @@ where $k=\frac{1}{2}C_d\rho A$
 
 - This results in an exponential decay of velocity, making range calculations more complex. 
 
+
 2. #### Vertical Motion with Drag 
 
 - Gravity still acts downward, but drag acts **opposite to velocity**. 
