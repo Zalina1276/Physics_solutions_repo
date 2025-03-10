@@ -94,11 +94,11 @@ To maximize the range $R$, we analyze the function:
 
 $$ R=\frac{v_0^2 sin2\theta}{g}$$
 
-Since $sin2\theta$ is maximized then $2\theta=90\degree$, this occurs at: 
+Since $sin2\theta$ is maximized then $2\theta=90 \degree$, this occurs at: 
 
-$$ \theta = 45\degree$$ 
+$$ \theta = 45 \degree$$ 
 
-Thus, the optimal angle for maximum range is $45\degree$
+Thus, the optimal angle for maximum range is $45 \degree$
 
 ### Andvance Analysis: Considering Air Resistance 
 
@@ -152,7 +152,7 @@ where $v_x(t)$ is affected by drag, making $R$ less than the vacuum case.
 #### Effect of Air Resistance on Range and Optimal Angle 
 
 - *Reduced Range*: Air resistance decreases both horizontal velocity and flight time, leading to a significantly shorter range than the ideal case. 
-- *Optimal Angle Shift*: In an ideal vacuum, the maximum range is at $45\degree$, but with drag, the optimal angle shifts lower (typically between $35\degree - 42\degree$ depending on conditions). 
+- *Optimal Angle Shift*: In an ideal vacuum, the maximum range is at $45 \degree$, but with drag, the optimal angle shifts lower (typically between $35 \degree - 42 \degree$ depending on conditions). 
 
 ### Other real-World Factors
 
