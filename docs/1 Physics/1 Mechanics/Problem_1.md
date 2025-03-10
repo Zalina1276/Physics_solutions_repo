@@ -117,6 +117,7 @@ This force affects both **horizontal and vertical** motion:
 
 1. #### Horizontal Motion with Drag
 
+
 - Unlike the ideal case where $v_x$ is constant, here, drag continuously slows it down. 
 - The equation of motion becomes: 
 
