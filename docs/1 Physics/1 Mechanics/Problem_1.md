@@ -115,7 +115,7 @@ where:
 
 This force affects both **horizontal and vertical** motion:
 
-1. #### Horizontal Motion with Drag
+#### 1. Horizontal Motion with Drag
 
 
 - Unlike the ideal case where $v_x$ is constant, here, drag continuously slows it down. 
@@ -130,7 +130,7 @@ where $k=\frac{1}{2}C_d\rho A$
 - This results in an exponential decay of velocity, making range calculations more complex. 
 
 
-2. #### Vertical Motion with Drag 
+#### 2. Vertical Motion with Drag 
 
 - Gravity still acts downward, but drag acts **opposite to velocity**. 
 - The equation of motion is: 
