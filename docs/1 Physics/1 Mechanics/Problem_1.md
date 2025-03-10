@@ -36,7 +36,7 @@ This task encourages a deep understanding of projectile motion while showcasing 
 - Horizontal motion (constant velocity)
 - Vertical motion (constant acceleration due to gravity)
 
-#### Define Variables 
+#### Define Variables: 
 
 - $v_0 = \text{initial velocity} \\$
 - $\theta = \text{launch angle} \\$
@@ -158,16 +158,16 @@ where $v_x(t)$ is affected by drag, making $R$ less than the vacuum case.
 
 ### Other real-World Factors
 
-1. #### Wind Effects
+#### 1. Wind Effects
 
 - A **tailwind** increases range, while **headwing** reduces it.
 - **Crosswinds** alter the trajectory, requiring agjustments. 
 
-2. #### Varying Gravity (Non-Uniform Field)
+#### 2. Varying Gravity (Non-Uniform Field)
 
 - For long-range projectiles (e.g., artillery, rockets), gravitational acceleration varies slightly with altitude and latitude. 
 
-3. #### Magnus Effect (For Spinning Projectiles)
+#### 3. Magnus Effect (For Spinning Projectiles)
 
 - A spinning object (like a soccer ball or bullet) experiences **lift due to air pressure differences** (Magnus effect), altering its trajectory. 
 
