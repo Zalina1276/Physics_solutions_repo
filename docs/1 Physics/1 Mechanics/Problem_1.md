@@ -108,10 +108,10 @@ $$ F_{drag} = \frac{1}{2}C_d \rho A v^2 $$
 
 where: 
 
-- $ C_d $ = drag coefficient (depends on the shape of the object) 
-- $ \rho $ = air density 
-- $ A $ = cross-sectional area of the projectile 
-- $ v $ = instantaneous veloccity
+- $C_d$ = drag coefficient (depends on the shape of the object) 
+- $\rho$ = air density 
+- $A$ = cross-sectional area of the projectile 
+- $v$ = instantaneous veloccity
 
 This force affects both **horizontal and vertical** motion:
 
