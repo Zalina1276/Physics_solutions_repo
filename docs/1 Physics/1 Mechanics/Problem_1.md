@@ -111,7 +111,7 @@ where:
 - $C_d$ = drag coefficient (depends on the shape of the object) 
 - $\rho$ = air density 
 - $A$ = cross-sectional area of the projectile 
-- $v$ = instantaneous veloccity
+- $v$ = instantaneous velocity
 
 This force affects both **horizontal and vertical** motion:
 
