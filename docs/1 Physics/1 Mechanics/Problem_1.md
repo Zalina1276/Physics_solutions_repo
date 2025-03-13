@@ -52,7 +52,7 @@ $$ v_{0y} = v_0 sin \theta $$
 
 #### Horizontal Motion 
 
-Since theere is no horizontal acceleration, the horizontal displacement at time $t$ is: 
+Since there is no horizontal acceleration, the horizontal displacement at time $t$ is: 
 
 $$ x= v_{0x}t= (v_0 cos \theta)t$$
 
