@@ -50,6 +50,11 @@ $$ v_{0x} = v_0 cos \theta $$
 
 $$ v_{0y} = v_0 sin \theta $$
 
+Given that acceleration is the second derivative of displacement with respect to time, we can express the equations of motion as:
+
+- Horizontal: $\frac{d^2 x(t)}{dt^2}=0$
+- Vertical: $\frac{d^2 y(t)}{dt^2}=-g$
+
 #### Horizontal Motion 
 
 Since there is no horizontal acceleration, the horizontal displacement at time $t$ is: 
@@ -213,6 +218,16 @@ plt.show()
 ```
 ![alt text](image-1.png)
 
+**Projectile motion on the Moon**
+The acceleration on the moon due to gravity is $g=1.625 m/s^2$ (about 1/6th of Earth's gravity)
+
+![alt text](image-2.png)
+
+Computation of total flight time is:
+
+$$t_{max}=\frac{2v_0 sin(\theta)}{g}$$
+
+[Google Collab][Problem1]
 
 
 
@@ -260,3 +275,7 @@ plt.show()
 
 
 
+
+
+
+[Problem1]: https://colab.research.google.com/drive/1p-qOOgQ5TO2jLPuOEkjplsOqmfm0CuZa?usp=sharing
