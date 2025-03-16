@@ -234,6 +234,11 @@
 <p>The initial velocity components are: </p>
 <div class="arithmatex">\[ v_{0x} = v_0 cos \theta \]</div>
 <div class="arithmatex">\[ v_{0y} = v_0 sin \theta \]</div>
+<p>Given that acceleration is the second derivative of displacement with respect to time, we can express the equations of motion as:</p>
+<ul>
+<li>Horizontal: <span class="arithmatex">\(\frac{d^2 x(t)}{dt^2}=0\)</span></li>
+<li>Vertical: <span class="arithmatex">\(\frac{d^2 y(t)}{dt^2}=-g\)</span></li>
+</ul>
 <h4 id="horizontal-motion">Horizontal Motion</h4>
 <p>Since there is no horizontal acceleration, the horizontal displacement at time <span class="arithmatex">\(t\)</span> is: </p>
 <div class="arithmatex">\[ x= v_{0x}t= (v_0 cos \theta)t\]</div>
@@ -353,6 +358,12 @@ plt.grid()
 plt.show()
 </code></pre>
 <p><img alt="alt text" src="../image-1.png"/></p>
+<p><strong>Projectile motion on the Moon</strong>
+The acceleration on the moon due to gravity is <span class="arithmatex">\(g=1.625 m/s^2\)</span> (about 1/6th of Earth's gravity)</p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<p>Computation of total flight time is:</p>
+<div class="arithmatex">\[t_{max}=\frac{2v_0 sin(\theta)}{g}\]</div>
+<p><a href="https://colab.research.google.com/drive/1p-qOOgQ5TO2jLPuOEkjplsOqmfm0CuZa?usp=sharing">Google Collab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
