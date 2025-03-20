@@ -236,7 +236,7 @@ Computation of total flight time is:
 
 $$t_{max}=\frac{2v_0 sin(\theta)}{g}$$
 
-[Google Collab][Problem1]
+all plottings in [Google Collab][Problem1]
 
 
 
