@@ -106,7 +106,7 @@ plt.show()
 
 ### Graphical Analysis
 
-- **Phase Portraits** plots angular displacement $\theta$ versus angular velocity $\omega_t$ to visualize the system's dynamics. Below is a Python script to generate phase portraits.
+- **Phase Portraits** plots angular displacement $\theta$ versus angular velocity $\omega_t$ to visualize the system's dynamics.
 
 ![alt text](image-4.png)
 
