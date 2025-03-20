@@ -21,6 +21,7 @@ $$
 $$
 
 where:
+
 - $\theta$ - the angular displacement,
 - $b$ - the damping coefficient,
 - $g$ - the gravitational acceleration,
@@ -47,7 +48,9 @@ $$
 At resonance, energy transfer is maximized, leading to large amplitude oscillations.
 
 ### 2. Analysis of Dynamics
+
 We investigate how damping ($b$), driving amplitude ($A$), and frequency ($\omega$) influence the motion:
+
 - **Low damping**: The system exhibits sustained oscillations.
 - **High damping**: Motion quickly dies out.
 - **Resonance**: Maximum amplitude is observed at a specific $\omega$.
@@ -55,6 +58,7 @@ We investigate how damping ($b$), driving amplitude ($A$), and frequency ($\omeg
 
 
 ### 3. Practical Applications
+
 - **Energy Harvesting**: Used in piezoelectric generators.
 - **Suspension Bridges**: Understanding oscillations helps prevent failures (e.g., Tacoma Narrows Bridge collapse).
 - **RLC Circuits**: Analogous behavior in driven electrical oscillators.
