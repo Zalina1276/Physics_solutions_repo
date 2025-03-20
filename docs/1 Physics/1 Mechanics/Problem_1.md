@@ -240,6 +240,10 @@ $$t_{max}=\frac{2v_0 sin(\theta)}{g}$$
 
 ![alt text](image-7.png)
 
+#### Examples of how Range changes depending on the angles
+
+![alt text](image-8.png)
+
 all plottings in [Google Collab][Problem1]
 
 
