@@ -236,6 +236,10 @@ Computation of total flight time is:
 
 $$t_{max}=\frac{2v_0 sin(\theta)}{g}$$
 
+#### Examples of how Range changes depending on velocity
+
+![alt text](image-7.png)
+
 all plottings in [Google Collab][Problem1]
 
 
