@@ -44,34 +44,43 @@ This task encourages a deep understanding of projectile motion while showcasing 
 - $t = \text{time} \\$
 - $x, y = \text{horizontal and vertical coordinates}$
 
-The initial velocity components are: 
-
-$$ v_{0x} = v_0 cos \theta $$
-
-$$ v_{0y} = v_0 sin \theta $$
-
 Given that acceleration is the second derivative of displacement with respect to time, we can express the equations of motion as:
 
 - Horizontal: $\frac{d^2 x(t)}{dt^2}=0$
+
+Integrating once: 
+
+$\frac{dx}{dt}=v_0cos\theta$
+
+Integrating again:
+
+$x(t)=(v_0cos\theta)t$
+
 - Vertical: $\frac{d^2 y(t)}{dt^2}=-g$
+
+Integrating once:
+
+$\frac{dy}{dt}=v_0sin\theta-gt$
+
+Integrating again:
+
+$y(t)=(v_0sin\theta)t-\frac{1}{2}gt^2$
 
 #### Horizontal Motion 
 
 Since there is no horizontal acceleration, the horizontal displacement at time $t$ is: 
 
-$$ x= v_{0x}t= (v_0 cos \theta)t$$
+$$ x= (v_0 cos \theta)t$$
 
 #### Vertial Motion
 
 The vertical displacement follows kinematic equation: 
 
-$$ y = v_{0y}t - \frac{1}{2}gt^2$$
-
 $$ y = (v_0 sin \theta)t - \frac{1}{2}gt^2 $$
 
 The vertical velocity at time $t$ is:
 
-$$ v_y = v_{0y} - gt = v_0 sin \theta - gt$$
+$$ v_y = v_0 sin \theta - gt$$
 
 At the highest point, $v_y=0$, so solving for $t$:
 
