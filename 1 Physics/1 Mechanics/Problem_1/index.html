@@ -231,23 +231,29 @@
 <li><span class="arithmatex">\(t = \text{time} \\\)</span></li>
 <li><span class="arithmatex">\(x, y = \text{horizontal and vertical coordinates}\)</span></li>
 </ul>
-<p>The initial velocity components are: </p>
-<div class="arithmatex">\[ v_{0x} = v_0 cos \theta \]</div>
-<div class="arithmatex">\[ v_{0y} = v_0 sin \theta \]</div>
 <p>Given that acceleration is the second derivative of displacement with respect to time, we can express the equations of motion as:</p>
 <ul>
 <li>Horizontal: <span class="arithmatex">\(\frac{d^2 x(t)}{dt^2}=0\)</span></li>
+</ul>
+<p>Integrating once: </p>
+<p><span class="arithmatex">\(\frac{dx}{dt}=v_0cos\theta\)</span></p>
+<p>Integrating again:</p>
+<p><span class="arithmatex">\(x(t)=(v_0cos\theta)t\)</span></p>
+<ul>
 <li>Vertical: <span class="arithmatex">\(\frac{d^2 y(t)}{dt^2}=-g\)</span></li>
 </ul>
+<p>Integrating once:</p>
+<p><span class="arithmatex">\(\frac{dy}{dt}=v_0sin\theta-gt\)</span></p>
+<p>Integrating again:</p>
+<p><span class="arithmatex">\(y(t)=(v_0sin\theta)t-\frac{1}{2}gt^2\)</span></p>
 <h4 id="horizontal-motion">Horizontal Motion</h4>
 <p>Since there is no horizontal acceleration, the horizontal displacement at time <span class="arithmatex">\(t\)</span> is: </p>
-<div class="arithmatex">\[ x= v_{0x}t= (v_0 cos \theta)t\]</div>
+<div class="arithmatex">\[ x= (v_0 cos \theta)t\]</div>
 <h4 id="vertial-motion">Vertial Motion</h4>
 <p>The vertical displacement follows kinematic equation: </p>
-<div class="arithmatex">\[ y = v_{0y}t - \frac{1}{2}gt^2\]</div>
 <div class="arithmatex">\[ y = (v_0 sin \theta)t - \frac{1}{2}gt^2 \]</div>
 <p>The vertical velocity at time <span class="arithmatex">\(t\)</span> is:</p>
-<div class="arithmatex">\[ v_y = v_{0y} - gt = v_0 sin \theta - gt\]</div>
+<div class="arithmatex">\[ v_y = v_0 sin \theta - gt\]</div>
 <p>At the highest point, <span class="arithmatex">\(v_y=0\)</span>, so solving for <span class="arithmatex">\(t\)</span>:</p>
 <div class="arithmatex">\[ 0=v_0 sin\theta - gt\]</div>
 <div class="arithmatex">\[ t_{max}= \frac{v_0 sin\theta}{g} \]</div>
