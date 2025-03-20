@@ -65,44 +65,23 @@ We investigate how damping ($b$), driving amplitude ($A$), and frequency ($\omeg
 
 ### 4. Implementation: Python Simulation
 
-Below is a Python script that numerically solves the differential equation using the Runge-Kutta method and visualizes the motion.
+Now let's show the difference in pendulums depending on different circumstances,
 
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import solve_ivp
+- Pendulum without any extra force and damping: 
 
-# Parameters
-g = 9.81  # Gravity (m/s^2)
-L = 1.0   # Length of pendulum (m)
-b = 0.2   # Damping coefficient
-A = 1.2   # Driving amplitude
-omega = 2.0  # Driving frequency
+![alt text](image-9.png)
 
-def pendulum_eq(t, y):
-    theta, omega_t = y
-    dydt = [omega_t, -b*omega_t - (g/L)*np.sin(theta) + A*np.cos(omega*t)]
-    return dydt
+- Pendulum with damping:
 
-# Initial conditions
-t_span = (0, 50)
-y0 = [0.2, 0]
-t_eval = np.linspace(*t_span, 1000)
+![alt text](image-10.png)
 
-# Solve ODE
-sol = solve_ivp(pendulum_eq, t_span, y0, t_eval=t_eval, method='RK45')
+- Pendulum with extra force and damping: 
 
-# Plot results
-plt.figure(figsize=(8,5))
-plt.plot(sol.t, sol.y[0], label='Angular Displacement (theta)')
-plt.xlabel('Time (s)')
-plt.ylabel('Theta (radians)')
-plt.legend()
-plt.title('Forced Damped Pendulum Motion')
-plt.grid()
-plt.show()
-```
-![alt text](image-3.png)
+![alt text](image-11.png)
+
+- Pendulum with resonance:
+
+![alt text](image-12.png)
 
 ### Graphical Analysis
 
