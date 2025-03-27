@@ -222,84 +222,11 @@
 <h2 id="computational-model">Computational Model</h2>
 <p>We implement a Python simulation to verify this relationship numerically.</p>
 <h3 id="python-implementation-keplers-third-law-verification"><strong>Python Implementation: Kepler's Third Law Verification</strong></h3>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
-M = 1.989e30     # Mass of the Sun (kg)
-
-# Define orbital radii (in meters) for simulation
-radii = np.linspace(5e10, 1e12, 100)  # Range from 0.33 AU to ~6.7 AU
-
-# Compute orbital periods using Kepler's Third Law
-periods = np.sqrt((4 * np.pi**2 * radii**3) / (G * M))
-
-# Plotting results
-plt.figure(figsize=(8,6))
-plt.plot(radii, periods**2, label='$T^2$ vs. $r^3$', color='blue')
-plt.xlabel('Orbital Radius (m)')
-plt.ylabel('Orbital Period Squared ($s^2$)')
-plt.title('Kepler\'s Third Law Verification')
-plt.legend()
-plt.grid()
-plt.show()
-</code></pre>
-<h3 id="additional-simulations"><strong>Additional Simulations</strong></h3>
+<p><img alt="alt text" src="../image.png"/></p>
 <h4 id="1-comparison-of-orbital-periods-for-different-central-masses"><strong>1. Comparison of Orbital Periods for Different Central Masses</strong></h4>
-<pre><code class="language-python"># Varying central masses (e.g., Earth, Jupiter, Sun)
-masses = [5.972e24, 1.898e27, 1.989e30]  # Earth, Jupiter, Sun
-labels = ['Earth', 'Jupiter', 'Sun']
-colors = ['red', 'green', 'blue']
-
-plt.figure(figsize=(8,6))
-for M, label, color in zip(masses, labels, colors):
-    periods = np.sqrt((4 * np.pi**2 * radii**3) / (G * M))
-    plt.plot(radii, periods**2, label=f'Central Mass: {label}', color=color)
-
-plt.xlabel('Orbital Radius (m)')
-plt.ylabel('Orbital Period Squared ($s^2$)')
-plt.title('Orbital Period vs. Radius for Different Central Masses')
-plt.legend()
-plt.grid()
-plt.show()
-</code></pre>
-<h4 id="2-orbital-periods-of-planets-in-the-solar-system"><strong>2. Orbital Periods of Planets in the Solar System</strong></h4>
-<pre><code class="language-python"># Data for planets (in meters and seconds)
-planet_radii = [5.79e10, 1.08e11, 1.50e11, 2.28e11, 7.78e11, 1.43e12, 2.87e12, 4.50e12]
-planet_periods = [7.6e6, 1.9e7, 3.2e7, 5.9e7, 3.7e8, 9.3e8, 2.7e9, 5.4e9]  # Approximate orbital periods
-planet_names = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
-
-plt.figure(figsize=(8,6))
-plt.scatter(planet_radii, np.array(planet_periods)**2, color='purple', label='Planets')
-plt.xlabel('Orbital Radius (m)')
-plt.ylabel('Orbital Period Squared ($s^2$)')
-plt.title('Orbital Period vs. Radius for Solar System Planets')
-for i, name in enumerate(planet_names):
-    plt.annotate(name, (planet_radii[i], planet_periods[i]**2))
-plt.legend()
-plt.grid()
-plt.show()
-</code></pre>
+<p><img alt="alt text" src="../image-1.png"/></p>
 <h4 id="3-simulating-a-satellite-orbit-around-earth"><strong>3. Simulating a Satellite Orbit Around Earth</strong></h4>
-<pre><code class="language-python"># Earth's mass
-M_earth = 5.972e24  # kg
-
-# Define orbital radii (e.g., low Earth orbit to geostationary orbit)
-satellite_radii = np.linspace(7e6, 4.2e7, 100)  # From 700 km to 42,000 km altitude
-
-# Compute orbital periods
-satellite_periods = np.sqrt((4 * np.pi**2 * satellite_radii**3) / (G * M_earth))
-
-plt.figure(figsize=(8,6))
-plt.plot(satellite_radii, satellite_periods, label='Satellite Orbit', color='orange')
-plt.xlabel('Orbital Radius (m)')
-plt.ylabel('Orbital Period (s)')
-plt.title('Satellite Orbital Period Around Earth')
-plt.legend()
-plt.grid()
-plt.show()
-</code></pre>
+<p><img alt="alt text" src="../image-2.png"/></p>
 <h3 id="results-discussion"><strong>Results &amp; Discussion</strong></h3>
 <p>These additional plots illustrate:</p>
 <ol>
@@ -317,7 +244,7 @@ plt.show()
 <p>While Kepler’s Third Law was originally formulated for elliptical orbits, the same principle holds when considering the <strong>semi-major axis</strong> <span class="arithmatex">\(a\)</span> instead of <span class="arithmatex">\(r\)</span>. This allows astronomers to study binary star systems, exoplanets, and even entire galaxies.</p>
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
 <p>Kepler’s Third Law provides a fundamental link between gravity and planetary motion, offering critical insights into astrophysics and space exploration. Its computational verification further strengthens its role as a cornerstone of celestial mechanics.</p>
-<p>All plots in: <a href="https://colab.research.google.com/drive/1qLvtIVOvNFZVebJs_L2Bp4DgAH0eoSg_?usp=sharing">Google Collab</a></p>
+<p>A GIF of orbital motion and all plot codes in: <a href="https://colab.research.google.com/drive/1qLvtIVOvNFZVebJs_L2Bp4DgAH0eoSg_?usp=sharing">Google Collab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
