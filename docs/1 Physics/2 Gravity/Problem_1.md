@@ -16,25 +16,25 @@ To derive this relationship from Newton's Laws and gravitational principles:
 
 1. The gravitational force provides the necessary centripetal force for a body in circular orbit:
 
-   $ F_g = \frac{G M m}{r^2}, \quad F_c = m \frac{v^2}{r}.$
+   $$F_g = \frac{G M m}{r^2}, \quad F_c = m \frac{v^2}{r}$$
 
    Setting these equal to each other:
 
-   $\frac{G M m}{r^2} = m \frac{v^2}{r}.$
+   $$\frac{G M m}{r^2} = m \frac{v^2}{r}$$
 
 2. The orbital velocity $v$ is given by:
 
-   $v = \frac{2\pi r}{T}.$
+   $$v = \frac{2\pi r}{T}$$
 
    Substituting into the force equation:
 
-   $\frac{G M}{r^2} = \frac{(2\pi r)^2}{T^2 r}.$
+   $$\frac{G M}{r^2} = \frac{(2\pi r)^2}{T^2 r}$$
 
 3. Simplifying:
 
-   $T^2 = \frac{4\pi^2}{G M} r^3.$
+   $$T^2 = \frac{4\pi^2}{G M} r^3$$
 
-This confirms Kepler's Third Law, with the proportionality constant $\frac{4\pi^2}{G M}$.
+This confirms Kepler's Third Law, with the proportionality constant $\frac{4\pi^2}{G M}$
 
 ## Astronomical Implications
 This relationship is crucial in determining:
