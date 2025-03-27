@@ -16,28 +16,29 @@ To derive this relationship from Newton's Laws and gravitational principles:
 
 1. The gravitational force provides the necessary centripetal force for a body in circular orbit:
 
-   $$F_g = \frac{G M m}{r^2}, \quad F_c = m \frac{v^2}{r}$$
+   $F_g = \frac{G M m}{r^2}, \quad F_c = m \frac{v^2}{r}$
 
    Setting these equal to each other:
 
-   $$\frac{G M m}{r^2} = m \frac{v^2}{r}$$
+   $\frac{G M m}{r^2} = m \frac{v^2}{r}$
 
 2. The orbital velocity $v$ is given by:
 
-   $$v = \frac{2\pi r}{T}$$
+   $v = \frac{2\pi r}{T}$
 
    Substituting into the force equation:
 
-   $$\frac{G M}{r^2} = \frac{(2\pi r)^2}{T^2 r}$$
+   $\frac{G M}{r^2} = \frac{(2\pi r)^2}{T^2 r}$
 
 3. Simplifying:
 
-   $$T^2 = \frac{4\pi^2}{G M} r^3$$
+   $T^2 = \frac{4\pi^2}{G M} r^3$
 
 This confirms Kepler's Third Law, with the proportionality constant $\frac{4\pi^2}{G M}$
 
 ### Key Variables for Orbital Motion
-1. Orbital Parameters
+
+**Orbital Parameters**
 
 - $M$ → Mass of the central body (e.g., the Sun, Earth) (kg)
 
@@ -49,7 +50,7 @@ This confirms Kepler's Third Law, with the proportionality constant $\frac{4\pi^
 
 - $v$ → Orbital velocity (m/s)
 
-2. Gravitational Constants
+**Gravitational Constants**
 
 - $G = 6.674 x 10^{-11} m^3/kg \cdot s^2$ → Universal gravitational constant
 
@@ -57,17 +58,13 @@ This confirms Kepler's Third Law, with the proportionality constant $\frac{4\pi^
 
 The velocity of an object in a stable circular orbit is given by:
 
-$$
-v = \sqrt{\frac{G M}{r}}
-$$
+$v = \sqrt{\frac{G M}{r}}$
 
  **2. Orbital Period (Kepler's Third Law)**
 
 The time required to complete one full orbit:
 
-$$
-T = 2\pi \sqrt{\frac{r^3}{G M}}
-$$
+$T = 2\pi \sqrt{\frac{r^3}{G M}}$
 
 ## Astronomical Implications
 This relationship is crucial in determining:
