@@ -7,7 +7,7 @@ The relationship between the square of the orbital period and the cube of the or
 ---
 
 ## Theoretical Derivation
-Kepler's Third Law states that the square of the orbital period \(T\) is proportional to the cube of the semi-major axis (or radius \(r\) for circular orbits):
+Kepler's Third Law states that the square of the orbital period $T$ is proportional to the cube of the semi-major axis (or radius $r$ for circular orbits):
 
 $$T^2 \propto r^3.$$
 
@@ -22,7 +22,7 @@ To derive this relationship from Newton's Laws and gravitational principles:
 
    $$\frac{G M m}{r^2} = m \frac{v^2}{r}.$$
 
-2. The orbital velocity \( v \) is given by:
+2. The orbital velocity $v$ is given by:
 
    $$v = \frac{2\pi r}{T}.$$
 
