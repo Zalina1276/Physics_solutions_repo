@@ -11,6 +11,7 @@ Kepler's Third Law states that the square of the orbital period \(T\) is proport
 
 $$T^2 \propto r^3.$$
 
+
 To derive this relationship from Newton's Laws and gravitational principles:
 
 1. The gravitational force provides the necessary centripetal force for a body in circular orbit:
