@@ -36,6 +36,39 @@ To derive this relationship from Newton's Laws and gravitational principles:
 
 This confirms Kepler's Third Law, with the proportionality constant $\frac{4\pi^2}{G M}$
 
+### Key Variables for Orbital Motion
+1. Orbital Parameters
+
+- $M$ → Mass of the central body (e.g., the Sun, Earth) (kg)
+
+- $m$ → Mass of the orbiting object (e.g., a planet, satellite) (kg)
+
+- $r$ → Orbital radius (distance from the center of mass) (m)
+
+- $T$ → Orbital period (time to complete one orbit) (s)
+
+- $v$ → Orbital velocity (m/s)
+
+2. Gravitational Constants
+
+- $G = 6.674 x 10^{-11} m^3/kg \cdot s^2$ → Universal gravitational constant
+
+ **1. Orbital Velocity**
+
+The velocity of an object in a stable circular orbit is given by:
+
+$$
+v = \sqrt{\frac{G M}{r}}
+$$
+
+ **2. Orbital Period (Kepler's Third Law)**
+
+The time required to complete one full orbit:
+
+$$
+T = 2\pi \sqrt{\frac{r^3}{G M}}
+$$
+
 ## Astronomical Implications
 This relationship is crucial in determining:
 
