@@ -87,28 +87,10 @@ We implement a Python simulation to verify this relationship numerically.
 
 ### **Python Implementation: Kepler's Third Law Verification**
 
-![alt text](image.png)
+![alt text](image-3.png)
 
-#### **1. Comparison of Orbital Periods for Different Central Masses**
 
-![alt text](image-1.png)
-
-#### **3. Simulating a Satellite Orbit Around Earth**
-
-![alt text](image-2.png)
-
-### **Results & Discussion**
-
-These additional plots illustrate:
-
-1. How the central mass influences the orbital period.
-
-2. The verification of Kepler’s Third Law using real planetary data.
-
-3. The relationship between altitude and period for Earth-orbiting satellites.
-
-## Extensions to Elliptical Orbits
-While Kepler’s Third Law was originally formulated for elliptical orbits, the same principle holds when considering the **semi-major axis** $a$ instead of $r$. This allows astronomers to study binary star systems, exoplanets, and even entire galaxies.
+![alt text](image-4.png)
 
 ### **Conclusion**
 Kepler’s Third Law provides a fundamental link between gravity and planetary motion, offering critical insights into astrophysics and space exploration. Its computational verification further strengthens its role as a cornerstone of celestial mechanics.
