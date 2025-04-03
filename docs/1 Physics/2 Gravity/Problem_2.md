@@ -2,7 +2,7 @@
 
 # Escape Velocities and Cosmic Velocities  
 
-## **1. Introduction**  
+## Introduction  
 
 The ability to overcome a celestial body's gravitational influence is crucial for space exploration. Three significant velocity thresholds are:  
 
@@ -14,7 +14,7 @@ These velocities are fundamental in space mission planning, from launching satel
 
 ---
 
-## **2. Mathematical Derivation**  
+## Mathematical Derivation  
 
 ### **First Cosmic Velocity ($v_1$) - Orbital Velocity**  
 
@@ -50,7 +50,7 @@ where $M_{s}$ is the Sun’s mass and $R$ is the planet’s distance from the Su
 
 ---
 
-## **3. Calculations for Earth, Mars, and Jupiter**  
+## Calculations for Earth, Mars, and Jupiter 
 
 Using standard values:  
 - Gravitational constant: $G = 6.674 \times 10^{-11} \, \text{m}^3 \text{kg}^{-1} \text{s}^{-2}$  
@@ -76,13 +76,13 @@ Similar calculations follow for Mars and Jupiter.
 
 ---
 
-## **4. Python Calculation & Visualization**  
+## Python Calculation & Visualization
 
 ![alt text](image-5.png)
 
 ---
 
-## **5. Importance in Space Exploration**  
+## Importance in Space Exploration  
 
 **1.Satellite Deployment:**  
 
@@ -101,7 +101,7 @@ Similar calculations follow for Mars and Jupiter.
 
 ---
 
-## **6. Conclusion**  
+## Conclusion
 
 The concept of cosmic velocities is fundamental to space travel, defining the energy requirements for various missions. Understanding these velocities helps optimize spacecraft design and mission planning, leading to efficient exploration of the cosmos.
 
