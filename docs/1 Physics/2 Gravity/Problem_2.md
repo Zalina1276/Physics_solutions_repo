@@ -84,17 +84,17 @@ Similar calculations follow for Mars and Jupiter.
 
 ## **5. Importance in Space Exploration**  
 
-1. **Satellite Deployment:**  
+**1.Satellite Deployment:**  
 
    - First cosmic velocity determines stable orbits.  
    - Used for communications, weather, and research satellites.  
 
-2. **Interplanetary Missions:**  
+**2.Interplanetary Missions:**  
 
    - Second cosmic velocity allows escape to other planets.  
    - Used for Mars rovers and deep-space probes.  
 
-3. **Interstellar Travel:**  
+**3.Interstellar Travel:**  
 
    - Third cosmic velocity enables missions beyond the solar system.  
    - Future missions (e.g., Breakthrough Starshot) aim to reach this velocity.  
