@@ -68,6 +68,7 @@ $$ v_{3E} = \sqrt{v_{2E}^2 + v_{\text{orbE}}^2} $$
 
 Similar calculations follow for Mars and Jupiter.
 
+
 ### **Conditions Analysis**
 
 1. **Dependence on Mass and Radius**: Higher mass increases gravitational pull, requiring higher velocities. Larger radius reduce the required velocity due to weaker surface gravity.
