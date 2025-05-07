@@ -175,6 +175,7 @@
 <h1 id="trajectories-of-a-freely-released-payload-near-earth">Trajectories of a Freely Released Payload Near Earth</h1>
 <h2 id="introduction">Introduction</h2>
 <p>When an object is released from a moving rocket near Earth, its trajectory depends on initial conditions and gravitational forces. This scenario presents a rich problem, blending principles of orbital mechanics and numerical methods. Understanding the potential trajectories is vital for space missions, such as deploying payloads or returning objects to Earth.</p>
+<p><img alt="alt text" src="../gravitational_field.gif"/></p>
 <h2 id="theoretical-background">Theoretical Background</h2>
 <p>The motion of an object near Earth is governed by <strong>Newton's Law of Gravitation</strong>, which states that the gravitational force between two masses <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span> is given by:</p>
 <div class="arithmatex">\[ F = \frac{G m_1 m_2}{r^2} \]</div>
@@ -212,7 +213,6 @@
 <p>This shows that the object’s kinetic energy at release is equal to the gravitational potential energy. For a parabolic trajectory, the velocity at the point of release (escape velocity) is given by:</p>
 <div class="arithmatex">\[ v_{\text{escape}} = \sqrt{\frac{2 G M}{r}} \]</div>
 <p>Where <span class="arithmatex">\(r\)</span> is the distance from Earth's center to the object.</p>
-<p><img alt="alt text" src="../image-6.png"/></p>
 <h3 id="elliptical-trajectory">Elliptical Trajectory</h3>
 <p>For an elliptical trajectory, the total mechanical energy of the system is negative, meaning the object is bound to Earth's gravity but will orbit in an elliptical path. The total energy for an elliptical orbit is given by:</p>
 <div class="arithmatex">\[ E = -\frac{G M m}{2a} \]</div>
@@ -225,7 +225,6 @@
 <li><span class="arithmatex">\(a\)</span> is the semi-major axis.</li>
 </ul>
 <p>This equation governs the speed of the object at any point in the elliptical orbit. If the velocity is not sufficient to escape Earth's gravity but still greater than the circular orbital velocity, the object follows an elliptical trajectory.</p>
-<p><img alt="alt text" src="../image-7.png"/></p>
 <h3 id="hyperbolic-trajectory">Hyperbolic Trajectory</h3>
 <p>For a hyperbolic trajectory, the total mechanical energy is positive, meaning the object has enough energy to escape Earth's gravitational field. The total energy for a hyperbolic orbit is:</p>
 <div class="arithmatex">\[ E = \frac{1}{2} m v^2 - \frac{G M m}{r} &gt; 0 \]</div>
@@ -239,11 +238,11 @@
 <p>The escape velocity for a hyperbolic trajectory, where the object has just enough energy to escape Earth's gravity, is given by:</p>
 <div class="arithmatex">\[ v_{\text{escape}} = \sqrt{\frac{2 G M}{r}} \]</div>
 <p>This is the same as the escape velocity for a parabolic trajectory, but for a hyperbolic trajectory, the object will continue moving away from Earth indefinitely once it reaches escape velocity.</p>
-<p><img alt="alt text" src="../image-8.png"/></p>
 <p>These equations describe the key differences between the three types of trajectories:
 - <strong>Parabolic</strong> trajectories occur when the object has just enough velocity to escape Earth's gravity, resulting in a return to Earth or continuing to infinity.
 - <strong>Elliptical</strong> trajectories describe objects in orbit, where they will eventually return to Earth.
 - <strong>Hyperbolic</strong> trajectories describe objects that have enough energy to escape Earth's gravitational pull and continue moving away indefinitely.</p>
+<p><img alt="alt text" src="../image-10.png"/></p>
 <h2 id="numerical-method">Numerical Method</h2>
 <p>We will use the <strong>Runge-Kutta method</strong> to numerically integrate the equations of motion. This method provides a more accurate solution than the Euler method.</p>
 <p>The Runge-Kutta method involves computing the following intermediate steps:</p>
