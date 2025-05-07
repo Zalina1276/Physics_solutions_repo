@@ -6,6 +6,8 @@
 
 When an object is released from a moving rocket near Earth, its trajectory depends on initial conditions and gravitational forces. This scenario presents a rich problem, blending principles of orbital mechanics and numerical methods. Understanding the potential trajectories is vital for space missions, such as deploying payloads or returning objects to Earth.
 
+![alt text](gravitational_field.gif)
+
 ## Theoretical Background
 
 The motion of an object near Earth is governed by **Newton's Law of Gravitation**, which states that the gravitational force between two masses $m_1$ and $m_2$ is given by:
@@ -63,8 +65,6 @@ $$ v_{\text{escape}} = \sqrt{\frac{2 G M}{r}} $$
 
 Where $r$ is the distance from Earth's center to the object.
 
-![alt text](image-6.png)
-
 ### Elliptical Trajectory
 
 For an elliptical trajectory, the total mechanical energy of the system is negative, meaning the object is bound to Earth's gravity but will orbit in an elliptical path. The total energy for an elliptical orbit is given by:
@@ -83,8 +83,6 @@ Where:
 - $a$ is the semi-major axis.
 
 This equation governs the speed of the object at any point in the elliptical orbit. If the velocity is not sufficient to escape Earth's gravity but still greater than the circular orbital velocity, the object follows an elliptical trajectory.
-
-![alt text](image-7.png)
 
 ### Hyperbolic Trajectory
 
@@ -107,12 +105,12 @@ $$ v_{\text{escape}} = \sqrt{\frac{2 G M}{r}} $$
 
 This is the same as the escape velocity for a parabolic trajectory, but for a hyperbolic trajectory, the object will continue moving away from Earth indefinitely once it reaches escape velocity.
 
-![alt text](image-8.png)
-
 These equations describe the key differences between the three types of trajectories:
 - **Parabolic** trajectories occur when the object has just enough velocity to escape Earth's gravity, resulting in a return to Earth or continuing to infinity.
 - **Elliptical** trajectories describe objects in orbit, where they will eventually return to Earth.
 - **Hyperbolic** trajectories describe objects that have enough energy to escape Earth's gravitational pull and continue moving away indefinitely.
+
+![alt text](image-10.png)
 
 ## Numerical Method
 
@@ -133,6 +131,7 @@ The Runge-Kutta method involves computing the following intermediate steps:
 - Reentry: If a payload is released with a velocity that brings it back toward Earth, it may reenter the atmosphere. This is a key consideration for spacecraft returning to Earth.
 
 - Escape Velocity: If the payload is released with sufficient velocity (about 11.2 km/s from Earth's surface), it will escape Earth's gravitational influence, which is important for missions to other planets or deep space.
+
 
 ## Conclusion
 
