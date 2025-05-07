@@ -172,6 +172,74 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="simulating-the-effects-of-the-lorentz-force">Simulating the Effects of the Lorentz Force</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The Lorentz force, described by the equation:</p>
+<div class="arithmatex">\[
+\vec{F} = q \vec{E} + q\vec{v} \times \vec{B},
+\]</div>
+<p>governs the dynamics of charged particles in electromagnetic fields. This force is central to plasma physics, particle accelerators, and the behavior of cosmic particles. Simulating the motion under such forces provides a hands-on understanding of charged particle behavior in various physical systems.</p>
+<hr/>
+<h2 id="1-exploration-of-applications">1. Exploration of Applications</h2>
+<h3 id="real-world-systems-influenced-by-lorentz-force">Real-World Systems Influenced by Lorentz Force</h3>
+<ul>
+<li><strong>Cyclotrons</strong>: Accelerate particles using oscillating electric fields and uniform magnetic fields.</li>
+<li><strong>Mass Spectrometers</strong>: Use magnetic deflection to separate ions by mass-to-charge ratio.</li>
+<li><strong>Tokamaks</strong>: Use magnetic confinement for plasma in nuclear fusion research.</li>
+<li><strong>Auroras</strong>: Caused by charged particles spiraling in Earth's magnetic field.</li>
+</ul>
+<h3 id="role-of-e-and-b-fields">Role of E and B Fields</h3>
+<ul>
+<li>Electric fields accelerate particles linearly.</li>
+<li>Magnetic fields cause circular or helical motion depending on the angle of the velocity vector.</li>
+<li>Crossed <span class="arithmatex">\(\vec{E}\)</span> and <span class="arithmatex">\(\vec{B}\)</span> fields produce <strong>drift motion</strong> (e.g., <span class="arithmatex">\(\vec{v}_\text{drift} = \frac{\vec{E} \times \vec{B}}{B^2}\)</span>).</li>
+</ul>
+<p><img alt="alt text" src="../image.png"/></p>
+<hr/>
+<h2 id="2-simulating-particle-motion">2. Simulating Particle Motion</h2>
+<p>The Lorentz force on a charged particle is: </p>
+<div class="arithmatex">\[ F = q(E+v * B) \]</div>
+<p>Applying Newton's Second Law <span class="arithmatex">\((F=ma)\)</span> the acceleration equals to:</p>
+<div class="arithmatex">\[ a = \frac{dv}{dt}=\frac{q}{m}(E + v * B) \]</div>
+<h3 id="scenarios-to-simulate">Scenarios to Simulate</h3>
+<ol>
+<li>
+<p><strong>Uniform Magnetic Field:</strong> <span class="arithmatex">\(B\)</span> along the z-axis, <span class="arithmatex">\(E=0\)</span>, expect for the circular or helical motion.</p>
+</li>
+<li>
+<p><strong>Crossed Fields:</strong> <span class="arithmatex">\(E\)</span> along x, <span class="arithmatex">\(B\)</span> along z. Expect <span class="arithmatex">\(E×B\)</span> drift motion.</p>
+</li>
+<li>
+<p><strong>Combined Electric and magnetic Fields:</strong> <span class="arithmatex">\(B\)</span> along z, <span class="arithmatex">\(E\)</span> along x. Expect helical motion with accelaration.</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<p>1) Uniform B (Helical)</p>
+<p>→ Circular motion due to Lorentz force only.</p>
+<p>2) Crossed E and B (E×B Drift)</p>
+<p>→ Noticeable sideways drift while looping — this is classic <span class="arithmatex">\(𝐸⃗×𝐵⃗\)</span> drift.</p>
+<p>3) E and B (Helical + Acceleration)</p>
+<p>→ Spirals expand outward due to acceleration in the direction of <span class="arithmatex">\(𝐸⃗\)</span></p>
+<h3 id="numerical-method">Numerical Method</h3>
+<p>We use the <strong>Runge-Kutta 4th Order</strong> to solve these differential equations numerically.</p>
+<p><img alt="alt text" src="../output.png"/></p>
+<hr/>
+<h2 id="3-parameter-exploration">3. Parameter Exploration</h2>
+<ul>
+<li><strong>Electric Field Strength (E)</strong>: Increasing E leads to more linear acceleration.</li>
+<li><strong>Magnetic Field Strength (B)</strong>: Affects curvature and tightness of helical motion.</li>
+<li><strong>Velocity Direction</strong>: Dictates whether motion is circular (perpendicular) or helical.</li>
+<li><strong>Charge &amp; Mass</strong>: Affect force magnitude and acceleration. Negative charges reverse trajectory orientation.</li>
+</ul>
+<h3 id="larmor-radius">Larmor Radius</h3>
+<p>Given by:</p>
+<div class="arithmatex">\[
+R_L = \frac{mv_\perp}{qB}
+\]</div>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Lorentz force plays a pivotal role in charged particle dynamics. Simulating motion under various field configurations demonstrates critical physics phenomena and has direct applications in devices like cyclotrons and plasma traps.</p>
+<p><img alt="alt text" src="../lorentz_force.gif"/></p>
+<p>All Python plots are in <a href="https://colab.research.google.com/drive/1aYcXxmB-A7YCJaSx7A2MY1Te8fAtZvtX?usp=sharing">Collab</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
