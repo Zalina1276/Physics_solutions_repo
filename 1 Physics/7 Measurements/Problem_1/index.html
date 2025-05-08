@@ -172,6 +172,112 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The gravitational acceleration <span class="arithmatex">\(g\)</span> is a key physical constant. Measuring it using a simple pendulum provides a practical approach to understanding experimental physics, wave motion, and the effect of uncertainties in measurements.</p>
+<hr/>
+<h2 id="materials">Materials</h2>
+<ul>
+<li>String: <span class="arithmatex">\(L = 1.00 \pm 0.005\)</span> m (Ruler resolution = 1 mm)</li>
+<li>Mass: Key chain</li>
+<li>Stopwatch: Smartphone with <span class="arithmatex">\(\pm 0.01\)</span> s precision</li>
+<li>Measuring tape (for string length)</li>
+</ul>
+<p><img alt="alt text" src="../pendulum_simulation.gif"/></p>
+<hr/>
+<h2 id="data-collection">Data Collection</h2>
+<ul>
+<li>Measured Length: <span class="arithmatex">\(L = 1.00\)</span> m</li>
+<li>Uncertainty: <span class="arithmatex">\(\Delta L = 0.005\)</span> m</li>
+</ul>
+<p>10 Oscillations (<span class="arithmatex">\(T_{10}\)</span>) (Measurements (seconds)):</p>
+<pre><code>20.10, 20.03, 20.09, 20.12, 20.06, 20.04, 20.07, 20.08, 20.01, 20.11
+</code></pre>
+<h3 id="calculated-values">Calculated Values</h3>
+<ul>
+<li>Mean <span class="arithmatex">\(T_{10} = \overline{T_{10}} = 20.071\)</span> s
+-- * Standard deviation <span class="arithmatex">\(\sigma_T = 0.038\)</span> s --</li>
+<li>Uncertainty in mean <span class="arithmatex">\(\Delta T_{10} = \frac{\sigma_T}{\sqrt{10}} = 0.012\)</span> s</li>
+</ul>
+<hr/>
+<h2 id="calculations">Calculations</h2>
+<h3 id="1-period-and-uncertainty">1. Period and Uncertainty</h3>
+<div class="arithmatex">\[
+T = \frac{\overline{T_{10}}}{10} = 2.0071 \text{ s}, \quad \Delta T = \frac{\Delta T_{10}}{10} = 0.0012 \text{ s}
+\]</div>
+<h3 id="2-gravity-estimation">2. Gravity Estimation</h3>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \times 1.00}{(2.0071)^2} = 9.81 \text{ m/s}^2
+\]</div>
+<h3 id="3-uncertainty-propagation">3. Uncertainty Propagation</h3>
+<div class="arithmatex">\[
+\Delta g = g \sqrt{\left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2} =
+9.81 \sqrt{\left( \frac{0.005}{1.00} \right)^2 + \left( 2 \cdot \frac{0.0012}{2.0071} \right)^2} \\
+\Delta g \approx 0.050 \text{ m/s}^2
+\]</div>
+<hr/>
+<h2 id="final-results">Final Results</h2>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Length (L)</td>
+<td>1.00 m</td>
+</tr>
+<tr>
+<td>Uncertainty (<span class="arithmatex">\(\Delta L\)</span>)</td>
+<td>0.005 m</td>
+</tr>
+<tr>
+<td>Mean <span class="arithmatex">\(T_{10}\)</span></td>
+<td>20.071 s</td>
+</tr>
+<tr>
+<td>Std Dev (<span class="arithmatex">\(\sigma_T\)</span>)</td>
+<td>0.038 s</td>
+</tr>
+<tr>
+<td>Uncertainty <span class="arithmatex">\(\Delta T_{10}\)</span></td>
+<td>0.012 s</td>
+</tr>
+<tr>
+<td>Period (T)</td>
+<td>2.0071 s</td>
+</tr>
+<tr>
+<td>Uncertainty (<span class="arithmatex">\(\Delta T\)</span>)</td>
+<td>0.0012 s</td>
+</tr>
+<tr>
+<td>Calculated <span class="arithmatex">\(g\)</span></td>
+<td>9.81 m/s²</td>
+</tr>
+<tr>
+<td>Uncertainty (<span class="arithmatex">\(\Delta g\)</span>)</td>
+<td>0.05 m/s²</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="discussion">Discussion</h2>
+<ul>
+<li><strong>Effect of <span class="arithmatex">\(\Delta L\)</span></strong>: A 1 mm resolution results in 0.5 cm uncertainty, significant for short lengths.</li>
+<li><strong>Effect of <span class="arithmatex">\(\Delta T\)</span></strong>: Human reaction time and timer resolution contribute to variability, impacting <span class="arithmatex">\(\Delta T\)</span>.</li>
+<li>
+<p><strong>Assumptions</strong>:</p>
+</li>
+<li>
+<p>Small angle approximation (<span class="arithmatex">\(\theta &lt; 15^\circ\)</span>)</p>
+</li>
+<li>Negligible air resistance and massless string</li>
+<li><strong>Comparison with Standard</strong>: Measured <span class="arithmatex">\(g = 9.81 \pm 0.05\)</span> m/s² closely matches accepted value (9.80665 m/s²).</li>
+</ul>
+<p>This experiment reinforces the importance of precision and error analysis in physical measurements and highlights the robustness of simple harmonic motion principles in determining fundamental constants.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
