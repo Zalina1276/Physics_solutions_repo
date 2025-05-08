@@ -29,36 +29,54 @@ The gravitational acceleration $g$ is a key physical constant. Measuring it usin
 ```
 20.10, 20.03, 20.09, 20.12, 20.06, 20.04, 20.07, 20.08, 20.01, 20.11
 ```
-
-### Calculated Values
-
-* Mean $T_{10} = \overline{T_{10}} = 20.071$ s
--- * Standard deviation $\sigma_T = 0.038$ s --
-* Uncertainty in mean $\Delta T_{10} = \frac{\sigma_T}{\sqrt{10}} = 0.012$ s
-
 ---
 
 ## Calculations
 
-### 1. Period and Uncertainty
+### Step 1: Mean $ \overline{T_{10}} $
+
+The average time for 10 oscillations is:
 
 $$
-T = \frac{\overline{T_{10}}}{10} = 2.0071 \text{ s}, \quad \Delta T = \frac{\Delta T_{10}}{10} = 0.0012 \text{ s}
+\overline{T_{10}} = \frac{1}{10} \sum_{i=1}^{10} T_i = 20.071 \ \text{s}
 $$
 
-### 2. Gravity Estimation
+### Step 2: Standard Deviation $ \sigma_T $
+
+Using the **sample standard deviation** formula:
 
 $$
-g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \times 1.00}{(2.0071)^2} = 9.81 \text{ m/s}^2
+\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (T_i - \overline{T})^2 } \approx 0.038 \ \text{s}
 $$
 
-### 3. Uncertainty Propagation
+(This was calculated using Python)
+
+### Step 3: Uncertainty in the Mean $ \Delta T_{10} $
 
 $$
-\Delta g = g \sqrt{\left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2} =
-9.81 \sqrt{\left( \frac{0.005}{1.00} \right)^2 + \left( 2 \cdot \frac{0.0012}{2.0071} \right)^2} \\
-\Delta g \approx 0.050 \text{ m/s}^2
+\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} = \frac{0.038}{\sqrt{10}} = 0.012 \ \text{s}
 $$
+
+### Step 4: Calculated $ g $
+
+$$
+g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 1.00}{(2.0071)^2} = 9.81 \ \text{m/s}^2
+$$
+
+### Step 5: Uncertainty in $ g $
+
+Using propagation of uncertainty:
+
+$$
+\Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
+$$
+
+Substitute known values:
+
+$$
+\Delta g = 9.81 \cdot \sqrt{ \left( \frac{0.005}{1.00} \right)^2 + \left( 2 \cdot \frac{0.0012}{2.0071} \right)^2 } \approx 0.050 \ \text{m/s}^2
+$$
+
 
 ---
 
