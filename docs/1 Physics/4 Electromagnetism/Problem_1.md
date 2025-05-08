@@ -59,11 +59,11 @@ $$ a = \frac{dv}{dt}=\frac{q}{m}(E + v * B) $$
 
 2) Crossed E and B (E×B Drift)
 
-→ Noticeable sideways drift while looping — this is classic $𝐸⃗×𝐵⃗$ drift.
+→ Noticeable sideways drift while looping — this is classic $𝐸×𝐵$ drift.
 
 3) E and B (Helical + Acceleration)
 
-→ Spirals expand outward due to acceleration in the direction of $𝐸⃗$
+→ Spirals expand outward due to acceleration in the direction of $𝐸$
 
 ### Numerical Method
 
