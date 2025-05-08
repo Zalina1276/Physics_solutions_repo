@@ -110,7 +110,7 @@ These equations describe the key differences between the three types of trajecto
 - **Elliptical** trajectories describe objects in orbit, where they will eventually return to Earth.
 - **Hyperbolic** trajectories describe objects that have enough energy to escape Earth's gravitational pull and continue moving away indefinitely.
 
-![alt text](image-10.png)
+![alt text](download.png)
 
 ## Numerical Method
 
