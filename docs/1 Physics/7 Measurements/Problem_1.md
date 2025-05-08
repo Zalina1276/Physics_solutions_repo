@@ -33,7 +33,7 @@ The gravitational acceleration $g$ is a key physical constant. Measuring it usin
 
 ## Calculations
 
-### Step 1: Mean $ \overline{T_{10}} $
+### Step 1: Mean $\overline{T_{10}}$
 
 The average time for 10 oscillations is:
 
@@ -41,7 +41,7 @@ $$
 \overline{T_{10}} = \frac{1}{10} \sum_{i=1}^{10} T_i = 20.071 \ \text{s}
 $$
 
-### Step 2: Standard Deviation $ \sigma_T $
+### Step 2: Standard Deviation $\sigma_T$
 
 Using the **sample standard deviation** formula:
 
@@ -51,19 +51,19 @@ $$
 
 (This was calculated using Python)
 
-### Step 3: Uncertainty in the Mean $ \Delta T_{10} $
+### Step 3: Uncertainty in the Mean $\Delta T_{10}$
 
 $$
 \Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} = \frac{0.038}{\sqrt{10}} = 0.012 \ \text{s}
 $$
 
-### Step 4: Calculated $ g $
+### Step 4: Calculated $g$
 
 $$
 g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 1.00}{(2.0071)^2} = 9.81 \ \text{m/s}^2
 $$
 
-### Step 5: Uncertainty in $ g $
+### Step 5: Uncertainty in $g$
 
 Using propagation of uncertainty:
 
