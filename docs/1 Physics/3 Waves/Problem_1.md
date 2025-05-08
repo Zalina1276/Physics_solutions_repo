@@ -75,6 +75,8 @@ All python codes for plots are in [Collab](https://colab.research.google.com/dri
 
 ![alt text](image-2.png)
 
+![alt text](image-3.png)
+
 * **Symmetry**: Because the sources are placed in a square arrangement, the resulting interference pattern also exhibits square symmetry — both reflectional and rotational. You can notice repeating wavefront motifs radiating outward and symmetric interference bands.
 
 * **Wave Nodes and Antinodes**: Nodes (points of no displacement) and antinodes (points of maximum displacement) form as a result of fixed phase relationships between sources. The locations of these are determined by the distances between the sources and the grid points.
