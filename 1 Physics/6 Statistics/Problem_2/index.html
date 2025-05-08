@@ -172,6 +172,84 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="estimating-pi-using-monte-carlo-methods">Estimating <span class="arithmatex">\(\Pi\)</span> using Monte Carlo Methods</h1>
+<h2 id="motivation">Motivation</h2>
+<p>Monte Carlo methods utilize randomness to approximate values that may be analytically intractable. Estimating <span class="arithmatex">\(\pi\)</span> using random sampling is a well-known illustration, linking geometry, probability, and computation. This technique is widely applicable in physics, finance, and other scientific fields.</p>
+<hr/>
+<h2 id="part-1-estimating-pi-using-a-circle">Part 1: Estimating <span class="arithmatex">\(\pi\)</span> Using a Circle</h2>
+<h3 id="1-theoretical-foundation">1. Theoretical Foundation</h3>
+<p>A unit circle (radius = 1) inscribed in a square of side 2 has an area of:</p>
+<ul>
+<li>Circle: <span class="arithmatex">\(A_c = \pi r^2 = \pi \times 1^2 = \pi\)</span></li>
+<li>Square: <span class="arithmatex">\(A_s = 4\)</span></li>
+</ul>
+<p>The probability that a randomly generated point in the square falls inside the circle is:</p>
+<div class="arithmatex">\[
+P = \frac{A_c}{A_s} = \frac{\pi}{4} \Rightarrow \pi \approx 4 \cdot \frac{\text{points inside circle}}{\text{total points}}
+\]</div>
+<h3 id="2-simulation">2. Simulation</h3>
+<p><img alt="alt text" src="../image.png"/></p>
+<p>Blue dots → Random points that fall inside the unit circle</p>
+<p>Red dots → Random points that fall outside the circle</p>
+<p>The boundary of the circle is clean and visible — exactly what you'd expect for <span class="arithmatex">\(𝑥^2 + 𝑦^2 ≤1\)</span></p>
+<p>Approximate estimate of <span class="arithmatex">\(\pi ≈ 3.1428\)</span> </p>
+<h3 id="3-analysis">3. Analysis</h3>
+<ul>
+<li><strong>Convergence Rate</strong>: Slow, proportional to <span class="arithmatex">\(\frac{1}{\sqrt{n}}\)</span></li>
+<li><strong>Accuracy</strong>: Improves with increasing number of points</li>
+</ul>
+<hr/>
+<h2 id="part-2-estimating-pi-using-buffons-needle">Part 2: Estimating <span class="arithmatex">\(\pi\)</span> Using Buffon’s Needle</h2>
+<h3 id="1-theoretical-foundation_1">1. Theoretical Foundation</h3>
+<p>Buffon’s Needle problem estimates <span class="arithmatex">\(\pi\)</span> by dropping a needle of length <span class="arithmatex">\(l\)</span> on a plane with parallel lines spaced <span class="arithmatex">\(d\)</span> apart:</p>
+<p>If <span class="arithmatex">\(l \leq d\)</span>, the probability of the needle crossing a line is:</p>
+<div class="arithmatex">\[
+P = \frac{2l}{\pi d} \Rightarrow \pi \approx \frac{2lN}{dC}
+\]</div>
+<p>Where:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(N\)</span>: total drops</p>
+</li>
+<li>
+<p><span class="arithmatex">\(C\)</span>: crossings</p>
+</li>
+</ul>
+<h3 id="2-simulation_1">2. Simulation</h3>
+<p><img alt="alt text" src="../image-1.png"/></p>
+<h3 id="3-analysis_1">3. Analysis</h3>
+<ul>
+<li>Requires many trials to converge due to rare events (line crossings).</li>
+<li>Slower convergence than circle-based method.</li>
+</ul>
+<hr/>
+<h2 id="comparison-conclusion">Comparison &amp; Conclusion</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Convergence Rate</th>
+<th>Visualization Complexity</th>
+<th>Robustness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Circle-Based</td>
+<td><span class="arithmatex">\(1/\sqrt{n}\)</span></td>
+<td>Easy</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Buffon’s Needle</td>
+<td><span class="arithmatex">\(\propto 1/n\)</span></td>
+<td>Medium</td>
+<td>Low (for small n)</td>
+</tr>
+</tbody>
+</table>
+<p>Monte Carlo methods provide powerful visual and practical tools for estimating <span class="arithmatex">\(\pi\)</span>. The circle method is more efficient and reliable for small to medium simulations, while Buffon’s method offers deep geometric insights and historical interest.</p>
+<p>Python codes are <a href="https://colab.research.google.com/drive/1B8TNG8LqCyDMFQNb1HaxijSjM2NNS036?usp=sharing">here</a></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
