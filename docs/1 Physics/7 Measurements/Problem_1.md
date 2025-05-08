@@ -15,9 +15,7 @@ The gravitational acceleration $g$ is a key physical constant. Measuring it usin
 * Stopwatch: Smartphone with $\pm 0.01$ s precision
 * Measuring tape (for string length)
 
-![alt text](pendulum_simulation.gif)
-
-
+![alt text](swinging_kitty_only.gif)
 
 ---
 
