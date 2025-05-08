@@ -172,7 +172,55 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<h1 id="equivalent-resistance-using-graph-theory-visual-algorithmic-approach">Equivalent Resistance Using Graph Theory (Visual + Algorithmic Approach)</h1>
+<h1 id="equivalent-resistance-using-graph-theory">Equivalent Resistance Using Graph Theory</h1>
+<h1 id="circuit-simplification-visualizing-equivalent-resistance">Circuit Simplification: Visualizing Equivalent Resistance</h1>
+<h2 id="goal">Goal</h2>
+<p>To demonstrate how the <strong>equivalent resistance</strong> of a circuit evolves as we <strong>remove one resistor at a time</strong>, while adjusting values of remaining resistors to preserve or compare <span class="arithmatex">\(R_{\text{eq}}\)</span>.</p>
+<hr/>
+<h2 id="initial-circuit">Initial Circuit</h2>
+<p>Let’s consider a resistor network:</p>
+<p><img alt="alt text" src="../image-2.png"/></p>
+<p>This means:
+- <span class="arithmatex">\(R_1\)</span> is in series with the <strong>parallel combination</strong> of <span class="arithmatex">\(R_2\)</span> and <span class="arithmatex">\(R_3\)</span>.</p>
+<hr/>
+<h3 id="step-1-calculate-initial-r_texteq">Step 1: Calculate Initial <span class="arithmatex">\(R_{\text{eq}}\)</span></h3>
+<p>We start by calculating the parallel combination:</p>
+<div class="arithmatex">\[
+R_{23} = \left( \frac{1}{R_2} + \frac{1}{R_3} \right)^{-1}
+= \left( \frac{1}{20} + \frac{1}{30} \right)^{-1}
+= \left( \frac{5}{60} \right)^{-1} = 12 \, \Omega
+\]</div>
+<p>Then the total equivalent resistance:</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = R_1 + R_{23} = 10 + 12 = 22 \, \Omega
+\]</div>
+<hr/>
+<h2 id="step-2-remove-r_3-adjust-r_2">Step 2: Remove <span class="arithmatex">\(R_3\)</span>, Adjust <span class="arithmatex">\(R_2\)</span></h2>
+<p>We now <strong>delete <span class="arithmatex">\(R_3\)</span></strong> and <strong>replace <span class="arithmatex">\(R_2\)</span> with 12Ω</strong> to preserve <span class="arithmatex">\(R_{\text{eq}}\)</span>.</p>
+<div class="arithmatex">\[A ── R₁ = 10Ω ── R₂ = 12Ω ── B\]</div>
+<p>Now the circuit is just two resistors in series:</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = R_1 + R_2 = 10 + 12 = 22 \, \Omega
+\]</div>
+<p><strong>Same result, simpler structure</strong></p>
+<hr/>
+<h2 id="step-3-remove-r_2-adjust-r_3">Step 3: Remove <span class="arithmatex">\(R_2\)</span>, Adjust <span class="arithmatex">\(R_3\)</span></h2>
+<p>Let’s try the opposite: <strong>remove <span class="arithmatex">\(R_2\)</span></strong> and set <span class="arithmatex">\(R_3 = 12Ω\)</span>:</p>
+<div class="arithmatex">\[
+A ── R₁ = 10Ω ── R₃ = 12Ω ── B
+\]</div>
+<p>Again:</p>
+<div class="arithmatex">\[
+R_{\text{eq}} = 10 + 12 = 22 \, \Omega
+\]</div>
+<p><strong>Same behavior</strong>, different configuration.</p>
+<p><img alt="alt text" src="../image-3.png"/></p>
+<hr/>
+<h2 id="insight">Insight</h2>
+<p>This process shows that:</p>
+<p>Different resistor combinations can be <strong>equivalent</strong>, as long as we correctly adjust the values and structure.</p>
+<p>This is exactly what <strong>graph-based circuit analysis</strong> helps us do — systematically simplify and compare circuits.</p>
+<h3 id="visual-algorithmic-approach">(Visual + Algorithmic Approach)</h3>
 <h2 id="problem-scenario">Problem Scenario</h2>
 <p>Given a resistor network, calculate the <strong>equivalent resistance</strong> between two nodes using graph theory.</p>
 <p>This Python implementation supports:
