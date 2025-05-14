@@ -179,7 +179,6 @@
 <hr/>
 <h2 id="initial-circuit">Initial Circuit</h2>
 <p>Let’s consider a resistor network:</p>
-<p><img alt="alt text" src="../image-2.png"/></p>
 <p>This means:
 - <span class="arithmatex">\(R_1\)</span> is in series with the <strong>parallel combination</strong> of <span class="arithmatex">\(R_2\)</span> and <span class="arithmatex">\(R_3\)</span>.</p>
 <hr/>
@@ -214,122 +213,18 @@ A ── R₁ = 10Ω ── R₃ = 12Ω ── B
 R_{\text{eq}} = 10 + 12 = 22 \, \Omega
 \]</div>
 <p><strong>Same behavior</strong>, different configuration.</p>
-<p><img alt="alt text" src="../image-4.png"/></p>
 <hr/>
 <h2 id="insight">Insight</h2>
 <p>This process shows that:</p>
 <p>Different resistor combinations can be <strong>equivalent</strong>, as long as we correctly adjust the values and structure.</p>
 <p>This is exactly what <strong>graph-based circuit analysis</strong> helps us do — systematically simplify and compare circuits.</p>
-<h3 id="visual-algorithmic-approach">(Visual + Algorithmic Approach)</h3>
-<h2 id="problem-scenario">Problem Scenario</h2>
-<p>Given a resistor network, calculate the <strong>equivalent resistance</strong> between two nodes using graph theory.</p>
-<p>This Python implementation supports:
-- Series and parallel detection
-- Arbitrary topologies
-- Graph simplification using NetworkX</p>
-<h3 id="why-graph-theory">Why Graph Theory?</h3>
-<ul>
-<li>Each <strong>node</strong> = circuit junction</li>
-<li>Each <strong>edge</strong> = resistor with resistance value (weight)</li>
-<li>This method works well for <strong>complex, nested combinations</strong> and can be automated</li>
-</ul>
-<hr/>
-<h2 id="how-it-works">How It Works</h2>
-<p>The algorithm:
-1. Detects and reduces <strong>series</strong> connections
-2. Detects and reduces <strong>parallel</strong> connections
-3. Simplifies the graph iteratively
-4. Outputs the equivalent resistance between any two given nodes</p>
-<hr/>
-<h2 id="python-code">Python Code</h2>
-<pre><code class="language-python">import networkx as nx
-
-def equivalent_resistance(graph, node_start, node_end):
-    G = graph.copy()
-
-    def reduce_series(G):
-        changed = True
-        while changed:
-            changed = False
-            for node in list(G.nodes):
-                if node in (node_start, node_end):
-                    continue
-                neighbors = list(G.neighbors(node))
-                if len(neighbors) == 2:
-                    u, v = neighbors
-                    R1 = G[node][u]['resistance']
-                    R2 = G[node][v]['resistance']
-                    R = R1 + R2
-                    G.add_edge(u, v, resistance=R)
-                    G.remove_node(node)
-                    changed = True
-                    break
-        return G
-
-    def reduce_parallel(G):
-        changed = True
-        while changed:
-            changed = False
-            for u, v in list(G.edges):
-                if G.number_of_edges(u, v) &gt; 1:
-                    resistances = [d['resistance'] for d in G.get_edge_data(u, v).values()]
-                    R_parallel = 1 / sum(1 / R for R in resistances)
-                    G.remove_edges_from([(u, v)] * G.number_of_edges(u, v))
-                    G.add_edge(u, v, resistance=R_parallel)
-                    changed = True
-        return G
-
-    prev_nodes = -1
-    while prev_nodes != G.number_of_nodes():
-        prev_nodes = G.number_of_nodes()
-        G = reduce_series(G)
-        G = reduce_parallel(G)
-
-    if G.has_edge(node_start, node_end):
-        return G[node_start][node_end]['resistance']
-    else:
-        raise ValueError("Unable to simplify circuit fully to a single resistance.")
-
-# --------------------------- EXAMPLES ---------------------------
-
-# Example 1: Simple Series Circuit
-G1 = nx.Graph()
-G1.add_edge('A', 'B', resistance=5)
-G1.add_edge('B', 'C', resistance=10)
-print("Test 1 - Equivalent Resistance from A to C:", equivalent_resistance(G1, 'A', 'C'))  # 15
-
-# Example 2: Simple Parallel Circuit
-G2 = nx.MultiGraph()
-G2.add_edge('A', 'B', resistance=10)
-G2.add_edge('A', 'B', resistance=20)
-G2 = nx.Graph(G2)
-print("Test 2 - Equivalent Resistance from A to B:", equivalent_resistance(G2, 'A', 'B'))  # ~6.67
-
-# Example 3: Mixed Series and Parallel
-G3 = nx.Graph()
-G3.add_edge('A', 'B', resistance=10)
-G3.add_edge('B', 'C', resistance=20)
-G3.add_edge('A', 'C', resistance=30)
-print("Test 3 - Equivalent Resistance from A to C:", equivalent_resistance(G3, 'A', 'C'))  # ~12
-
-</code></pre>
-<p><img alt="alt text" src="../equivalent_resistance_simplification.gif"/></p>
-<h2 id="efficiency-extensions">Efficiency &amp; Extensions</h2>
-<ul>
-<li>Works well on sparse graphs (tree-like)</li>
-<li>Time complexity depends on the number of iterations and edges</li>
-<li>Can be extended with:</li>
-<li>Delta-Wye (Δ-Y) transformations</li>
-<li>Symbolic analysis for unknowns</li>
-<li>GUI tools for dragging and simplifying circuits</li>
-</ul>
 <hr/>
 <p>Python implementations are in <a href="https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing">Collab</a></p>
-<p><img alt="alt text" src="../step1.png"/>
-<img alt="alt text" src="../step2.png"/>
-<img alt="alt text" src="../step3.png"/>
-<img alt="alt text" src="../step4.png"/>
-<img alt="alt text" src="../final.png"/></p>
+<p><img alt="alt text" src="../step1.png"/></p>
+<p><img alt="alt text" src="../step2.png"/> </p>
+<p><img alt="alt text" src="../step3.png"/></p>
+<p><img alt="alt text" src="../step4.png"/></p>
+<p><img alt="alt text" src="../final.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
