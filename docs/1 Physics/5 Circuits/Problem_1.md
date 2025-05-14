@@ -204,3 +204,9 @@ print("Test 3 - Equivalent Resistance from A to C:", equivalent_resistance(G3, '
 ---
 
 Python implementations are in [Collab](https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing)
+
+  ![alt text](step1.png)
+  ![alt text](step2.png) 
+ ![alt text](step3.png)
+ ![alt text](step4.png)
+ ![alt text](final.png)
