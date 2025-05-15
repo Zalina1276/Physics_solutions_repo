@@ -12,9 +12,9 @@ To demonstrate how the **equivalent resistance** of a circuit evolves as we **re
 
 We consider a resistor network with the following values:
 
+- $R_1 = 0.267\,\Omega$
 - $R_2 = 4\,\Omega$
 - $R_3 = 6\,\Omega$
-- $R_1 = 0.267\,\Omega$
 - $R_4 = 1.2\,\Omega$
 - $R_5 = 1.2\,\Omega$
 
