@@ -13,7 +13,6 @@ The gravitational acceleration $g$ is a key physical constant. Measuring it usin
 * String: $L \approx 17.35 \pm 0.005$ m (based on period and known $g$)
 * Mass: Key chain
 * Stopwatch: Smartphone with $\pm 0.01$ s precision
-* Measuring tape (for string length)
 
 ![alt text](swinging_kitty_only.gif)
 
@@ -106,7 +105,7 @@ $$
 
 * **String length estimation**: The length was back-calculated from the observed period assuming $g = 9.81$ m/s².
 * **Effect of $\Delta L$**: A 1 mm resolution results in 0.5 cm uncertainty, significant for short lengths.
-* **Effect of $\Delta T$**: Human reaction time and timer resolution contribute to variability, impacting $\Delta T$.
+* **Effect of $\Delta T$**: Human reaction time and timer resolution contribute to variability, impacting $\Delta T$
 * **Assumptions**:
 
   * Small angle approximation ($\theta < 15^\circ$)
