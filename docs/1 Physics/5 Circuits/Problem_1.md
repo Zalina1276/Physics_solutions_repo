@@ -30,9 +30,7 @@ A ── R1 ┤                 ├── R4 ── R5 ── B
 
 ##  Step-by-Step Simplification
 
-### Step 1: Parallel Combination $R_{23}$
-
-We start by simplifying $R_2$ and $R_3$ in parallel:
+### Step 1: Combine $R_2$ and $R_3$ in Parallel → $R_{23}$
 
 $$
 \frac{1}{R_{23}} = \frac{1}{R_2} + \frac{1}{R_3} = \frac{1}{4} + \frac{1}{6} = \frac{5}{12}
@@ -42,38 +40,31 @@ $$
 R_{23} = \frac{12}{5} = 2.4 \, \Omega
 $$
 
-### Step 2: Combine $R_4$ and $R_5$
-
-These are in series:
+### Step 2: Combine $R_4$ and $R_5$ in Series → $R_{45}$
 
 $$
 R_{45} = R_4 + R_5 = 1.2 + 1.2 = 2.4 \, \Omega
 $$
 
-### Step 3: Combine $R_{23}$ and $R_{45}$ in Parallel
-
-Now we combine those two parallel branches:
+### Step 3: Combine $R_{23}$ and $R_1$ in Series → $R_{123}$
 
 $$
-\frac{1}{R_{2345}} = \frac{1}{R_{23}} + \frac{1}{R_{45}} = \frac{1}{2.4} + \frac{1}{2.4} = \frac{2}{2.4}
+R_{123} = R_{23} + R_1 = 2.4 + 0.267 = 2.667 \, \Omega
+$$
+
+### Step 4: Combine $R_{123}$ and $R_{45}$ in Parallel
+
+$$
+\frac{1}{R_{\text{eq}}} = \frac{1}{R_{123}} + \frac{1}{R_{45}} = \frac{1}{2.667} + \frac{1}{2.4}
 $$
 
 $$
-R_{2345} = \frac{2.4}{2} = 1.2 \, \Omega
+\frac{1}{R_{\text{eq}}} \approx 0.375 + 0.417 = 0.792
 $$
 
-### Step 4: Add $R_1$ in Series
-
-Finally:
-
 $$
-R_{\text{eq}} = R_1 + R_{2345} = 0.267 + 2.4 = 2.667 \, \Omega
+R_{\text{eq}} = \frac{1}{0.792} \approx \boxed{1.26 \, \Omega}
 $$
-
-**Final equivalent resistance:**  
-**$R_{\text{eq}} = 2.667 \Omega$**
-
----
 
 ## Insight
 
@@ -91,6 +82,8 @@ This process shows how different resistor configurations — even when visually 
 
  ![alt text](step4.png)
 
- ![alt text](final.png)
+ ![alt text](<final (1).png>) 
+
+
  
  Python implementations are in [Collab](https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing)
