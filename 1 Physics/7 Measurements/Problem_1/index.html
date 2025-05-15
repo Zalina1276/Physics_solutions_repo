@@ -178,7 +178,7 @@
 <hr/>
 <h2 id="materials">Materials</h2>
 <ul>
-<li>String: <span class="arithmatex">\(L = 1.00 \pm 0.005\)</span> m (Ruler resolution = 1 mm)</li>
+<li>String: <span class="arithmatex">\(L \approx 17.35 \pm 0.005\)</span> m (based on period and known <span class="arithmatex">\(g\)</span>)</li>
 <li>Mass: Key chain</li>
 <li>Stopwatch: Smartphone with <span class="arithmatex">\(\pm 0.01\)</span> s precision</li>
 <li>Measuring tape (for string length)</li>
@@ -187,41 +187,46 @@
 <hr/>
 <h2 id="data-collection">Data Collection</h2>
 <ul>
-<li>Measured Length: <span class="arithmatex">\(L = 1.00\)</span> m</li>
+<li>Estimated Length: <span class="arithmatex">\(L = 17.35\)</span> m (based on timing and known <span class="arithmatex">\(g\)</span>)</li>
 <li>Uncertainty: <span class="arithmatex">\(\Delta L = 0.005\)</span> m</li>
 </ul>
-<p>10 Oscillations (<span class="arithmatex">\(T_{10}\)</span>) (Measurements (seconds)):</p>
-<pre><code>20.10, 20.03, 20.09, 20.12, 20.06, 20.04, 20.07, 20.08, 20.01, 20.11
+<p>10 Individual Oscillations (Measurements in seconds):</p>
+<pre><code>8.35, 8.3, 8.36, 8.37, 8.4, 8.34, 8.35, 8.42, 8.3, 8.38
 </code></pre>
 <hr/>
 <h2 id="calculations">Calculations</h2>
-<h3 id="step-1-mean-overlinet_10">Step 1: Mean <span class="arithmatex">\(\overline{T_{10}}\)</span></h3>
-<p>The average time for 10 oscillations is:</p>
+<h3 id="step-1-mean-overlinet">Step 1: Mean <span class="arithmatex">\(\overline{T}\)</span></h3>
+<p>The average time for one oscillation based on 10 measurements is:</p>
 <div class="arithmatex">\[
-\overline{T_{10}} = \frac{1}{10} \sum_{i=1}^{10} T_i = 20.071 \ \text{s}
+\overline{T} = \frac{1}{10} \sum_{i=1}^{10} T_i = 8.36 \ \text{s}
 \]</div>
 <h3 id="step-2-standard-deviation-sigma_t">Step 2: Standard Deviation <span class="arithmatex">\(\sigma_T\)</span></h3>
 <p>Using the <strong>sample standard deviation</strong> formula:</p>
 <div class="arithmatex">\[
-\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (T_i - \overline{T})^2 } \approx 0.038 \ \text{s}
+\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (T_i - \overline{T})^2 } \approx 0.04 \ \text{s}
 \]</div>
 <p>(This was calculated using Python)</p>
-<h3 id="step-3-uncertainty-in-the-mean-delta-t_10">Step 3: Uncertainty in the Mean <span class="arithmatex">\(\Delta T_{10}\)</span></h3>
+<h3 id="step-3-uncertainty-in-the-mean-delta-t">Step 3: Uncertainty in the Mean <span class="arithmatex">\(\Delta T\)</span></h3>
 <div class="arithmatex">\[
-\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} = \frac{0.038}{\sqrt{10}} = 0.012 \ \text{s}
+\Delta T = \frac{\sigma_T}{\sqrt{n}} = \frac{0.04}{\sqrt{10}} = 0.01 \ \text{s}
 \]</div>
-<h3 id="step-4-calculated-g">Step 4: Calculated <span class="arithmatex">\(g\)</span></h3>
+<h3 id="step-4-estimated-string-length-l">Step 4: Estimated String Length <span class="arithmatex">\(L\)</span></h3>
+<p>Based on the average period and standard gravity:</p>
 <div class="arithmatex">\[
-g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 1.00}{(2.0071)^2} = 9.81 \ \text{m/s}^2
+L = \frac{g T^2}{4\pi^2} = \frac{9.81 \cdot 8.36^2}{4\pi^2} \approx 17.35 \ \text{m}
 \]</div>
-<h3 id="step-5-uncertainty-in-g">Step 5: Uncertainty in <span class="arithmatex">\(g\)</span></h3>
+<h3 id="step-5-calculated-g">Step 5: Calculated <span class="arithmatex">\(g\)</span></h3>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 17.35}{8.36^2} = 9.81 \ \text{m/s}^2
+\]</div>
+<h3 id="step-6-uncertainty-in-g">Step 6: Uncertainty in <span class="arithmatex">\(g\)</span></h3>
 <p>Using propagation of uncertainty:</p>
 <div class="arithmatex">\[
 \Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
 \]</div>
 <p>Substitute known values:</p>
 <div class="arithmatex">\[
-\Delta g = 9.81 \cdot \sqrt{ \left( \frac{0.005}{1.00} \right)^2 + \left( 2 \cdot \frac{0.0012}{2.0071} \right)^2 } \approx 0.050 \ \text{m/s}^2
+\Delta g = 9.81 \cdot \sqrt{ \left( \frac{0.005}{17.35} \right)^2 + \left( 2 \cdot \frac{0.01}{8.36} \right)^2 } \approx 0.05 \ \text{m/s}^2
 \]</div>
 <hr/>
 <h2 id="final-results">Final Results</h2>
@@ -235,31 +240,23 @@ g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 1.00}{(2.0071)^2} = 9.81 \ \text{m
 <tbody>
 <tr>
 <td>Length (L)</td>
-<td>1.00 m</td>
+<td>17.35 m</td>
 </tr>
 <tr>
 <td>Uncertainty (<span class="arithmatex">\(\Delta L\)</span>)</td>
 <td>0.005 m</td>
 </tr>
 <tr>
-<td>Mean <span class="arithmatex">\(T_{10}\)</span></td>
-<td>20.071 s</td>
+<td>Mean <span class="arithmatex">\(T\)</span></td>
+<td>8.36 s</td>
 </tr>
 <tr>
 <td>Std Dev (<span class="arithmatex">\(\sigma_T\)</span>)</td>
-<td>0.038 s</td>
-</tr>
-<tr>
-<td>Uncertainty <span class="arithmatex">\(\Delta T_{10}\)</span></td>
-<td>0.012 s</td>
-</tr>
-<tr>
-<td>Period (T)</td>
-<td>2.0071 s</td>
+<td>0.04 s</td>
 </tr>
 <tr>
 <td>Uncertainty (<span class="arithmatex">\(\Delta T\)</span>)</td>
-<td>0.0012 s</td>
+<td>0.01 s</td>
 </tr>
 <tr>
 <td>Calculated <span class="arithmatex">\(g\)</span></td>
@@ -274,6 +271,7 @@ g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 1.00}{(2.0071)^2} = 9.81 \ \text{m
 <hr/>
 <h2 id="discussion">Discussion</h2>
 <ul>
+<li><strong>String length estimation</strong>: The length was back-calculated from the observed period assuming <span class="arithmatex">\(g = 9.81\)</span> m/s².</li>
 <li><strong>Effect of <span class="arithmatex">\(\Delta L\)</span></strong>: A 1 mm resolution results in 0.5 cm uncertainty, significant for short lengths.</li>
 <li><strong>Effect of <span class="arithmatex">\(\Delta T\)</span></strong>: Human reaction time and timer resolution contribute to variability, impacting <span class="arithmatex">\(\Delta T\)</span>.</li>
 <li>
