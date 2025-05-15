@@ -192,35 +192,31 @@ A ── R1 ┤                 ├── R4 ── R5 ── B
 </code></pre>
 <hr/>
 <h2 id="step-by-step-simplification">Step-by-Step Simplification</h2>
-<h3 id="step-1-parallel-combination-r_23">Step 1: Parallel Combination <span class="arithmatex">\(R_{23}\)</span></h3>
-<p>We start by simplifying <span class="arithmatex">\(R_2\)</span> and <span class="arithmatex">\(R_3\)</span> in parallel:</p>
+<h3 id="step-1-combine-r_2-and-r_3-in-parallel-r_23">Step 1: Combine <span class="arithmatex">\(R_2\)</span> and <span class="arithmatex">\(R_3\)</span> in Parallel → <span class="arithmatex">\(R_{23}\)</span></h3>
 <div class="arithmatex">\[
 \frac{1}{R_{23}} = \frac{1}{R_2} + \frac{1}{R_3} = \frac{1}{4} + \frac{1}{6} = \frac{5}{12}
 \]</div>
 <div class="arithmatex">\[
 R_{23} = \frac{12}{5} = 2.4 \, \Omega
 \]</div>
-<h3 id="step-2-combine-r_4-and-r_5">Step 2: Combine <span class="arithmatex">\(R_4\)</span> and <span class="arithmatex">\(R_5\)</span></h3>
-<p>These are in series:</p>
+<h3 id="step-2-combine-r_4-and-r_5-in-series-r_45">Step 2: Combine <span class="arithmatex">\(R_4\)</span> and <span class="arithmatex">\(R_5\)</span> in Series → <span class="arithmatex">\(R_{45}\)</span></h3>
 <div class="arithmatex">\[
 R_{45} = R_4 + R_5 = 1.2 + 1.2 = 2.4 \, \Omega
 \]</div>
-<h3 id="step-3-combine-r_23-and-r_45-in-parallel">Step 3: Combine <span class="arithmatex">\(R_{23}\)</span> and <span class="arithmatex">\(R_{45}\)</span> in Parallel</h3>
-<p>Now we combine those two parallel branches:</p>
+<h3 id="step-3-combine-r_23-and-r_1-in-series-r_123">Step 3: Combine <span class="arithmatex">\(R_{23}\)</span> and <span class="arithmatex">\(R_1\)</span> in Series → <span class="arithmatex">\(R_{123}\)</span></h3>
 <div class="arithmatex">\[
-\frac{1}{R_{2345}} = \frac{1}{R_{23}} + \frac{1}{R_{45}} = \frac{1}{2.4} + \frac{1}{2.4} = \frac{2}{2.4}
+R_{123} = R_{23} + R_1 = 2.4 + 0.267 = 2.667 \, \Omega
+\]</div>
+<h3 id="step-4-combine-r_123-and-r_45-in-parallel">Step 4: Combine <span class="arithmatex">\(R_{123}\)</span> and <span class="arithmatex">\(R_{45}\)</span> in Parallel</h3>
+<div class="arithmatex">\[
+\frac{1}{R_{\text{eq}}} = \frac{1}{R_{123}} + \frac{1}{R_{45}} = \frac{1}{2.667} + \frac{1}{2.4}
 \]</div>
 <div class="arithmatex">\[
-R_{2345} = \frac{2.4}{2} = 1.2 \, \Omega
+\frac{1}{R_{\text{eq}}} \approx 0.375 + 0.417 = 0.792
 \]</div>
-<h3 id="step-4-add-r_1-in-series">Step 4: Add <span class="arithmatex">\(R_1\)</span> in Series</h3>
-<p>Finally:</p>
 <div class="arithmatex">\[
-R_{\text{eq}} = R_1 + R_{2345} = 0.267 + 2.4 = 2.667 \, \Omega
+R_{\text{eq}} = \frac{1}{0.792} \approx \boxed{1.26 \, \Omega}
 \]</div>
-<p><strong>Final equivalent resistance:</strong><br/>
-<strong><span class="arithmatex">\(R_{\text{eq}} = 2.667 \Omega\)</span></strong></p>
-<hr/>
 <h2 id="insight">Insight</h2>
 <p>This process shows how different resistor configurations — even when visually complex — can be <strong>systematically reduced</strong> using basic parallel and series rules. This is a core principle in <strong>graph-based circuit analysis</strong>, which allows us to simplify, analyze, and redesign circuits efficiently.</p>
 <hr/>
@@ -229,7 +225,7 @@ R_{\text{eq}} = R_1 + R_{2345} = 0.267 + 2.4 = 2.667 \, \Omega
 <p><img alt="alt text" src="../step2.png"/> </p>
 <p><img alt="alt text" src="../step3.png"/></p>
 <p><img alt="alt text" src="../step4.png"/></p>
-<p><img alt="alt text" src="../final.png"/></p>
+<p><img alt="alt text" src="../final%20%281%29.png"/> </p>
 <p>Python implementations are in <a href="https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing">Collab</a></p>
 </div>
 </div><footer>
