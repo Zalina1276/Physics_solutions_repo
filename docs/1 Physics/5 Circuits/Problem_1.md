@@ -1,9 +1,6 @@
-# Problem 1
+# Problem 1:
 
-# Equivalent Resistance Using Graph Theory 
-
-
-# Circuit Simplification: Visualizing Equivalent Resistance
+# Equivalent Resistance Using Graph Theory: Circuit Simplification: Visualizing Equivalent Resistance
 
 ##  Goal
 
@@ -13,77 +10,78 @@ To demonstrate how the **equivalent resistance** of a circuit evolves as we **re
 
 ## Initial Circuit
 
-Let’s consider a resistor network:
+We consider a resistor network with the following values:
 
-This means:
-- $R_1$ is in series with the **parallel combination** of $R_2$ and $R_3$.
+- $R_2 = 4\,\Omega$
+- $R_3 = 6\,\Omega$
+- $R_1 = 0.267\,\Omega$
+- $R_4 = 1.2\,\Omega$
+- $R_5 = 1.2\,\Omega$
 
----
+The schematic structure is:
 
-### Step 1: Calculate Initial $R_{\text{eq}}$
-
-We start by calculating the parallel combination:
-
-$$
-R_{23} = \left( \frac{1}{R_2} + \frac{1}{R_3} \right)^{-1}
-= \left( \frac{1}{20} + \frac{1}{30} \right)^{-1}
-= \left( \frac{5}{60} \right)^{-1} = 12 \, \Omega
-$$
-
-Then the total equivalent resistance:
-
-$$
-R_{\text{eq}} = R_1 + R_{23} = 10 + 12 = 22 \, \Omega
-$$
+```
+        ┌──── R2 = 4Ω ────┐
+A ── R1 ┤                 ├── R4 ── R5 ── B
+        └──── R3 = 6Ω ────┘
+```
 
 ---
 
-## Step 2: Remove $R_3$, Adjust $R_2$
+##  Step-by-Step Simplification
 
-We now **delete $R_3$** and **replace $R_2$ with 12Ω** to preserve $R_{\text{eq}}$.
+### Step 1: Parallel Combination $R_{23}$
 
-$$A ── R₁ = 10Ω ── R₂ = 12Ω ── B$$
-
-
-Now the circuit is just two resistors in series:
+We start by simplifying $R_2$ and $R_3$ in parallel:
 
 $$
-R_{\text{eq}} = R_1 + R_2 = 10 + 12 = 22 \, \Omega
+\frac{1}{R_{23}} = \frac{1}{R_2} + \frac{1}{R_3} = \frac{1}{4} + \frac{1}{6} = \frac{5}{12}
 $$
 
-**Same result, simpler structure**
-
----
-
-## Step 3: Remove $R_2$, Adjust $R_3$
-
-Let’s try the opposite: **remove $R_2$** and set $R_3 = 12Ω$:
-
 $$
-A ── R₁ = 10Ω ── R₃ = 12Ω ── B
+R_{23} = \frac{12}{5} = 2.4 \, \Omega
 $$
 
-Again:
+### Step 2: Combine $R_4$ and $R_5$
+
+These are in series:
 
 $$
-R_{\text{eq}} = 10 + 12 = 22 \, \Omega
+R_{45} = R_4 + R_5 = 1.2 + 1.2 = 2.4 \, \Omega
 $$
 
-**Same behavior**, different configuration.
+### Step 3: Combine $R_{23}$ and $R_{45}$ in Parallel
+
+Now we combine those two parallel branches:
+
+$$
+\frac{1}{R_{2345}} = \frac{1}{R_{23}} + \frac{1}{R_{45}} = \frac{1}{2.4} + \frac{1}{2.4} = \frac{2}{2.4}
+$$
+
+$$
+R_{2345} = \frac{2.4}{2} = 1.2 \, \Omega
+$$
+
+### Step 4: Add $R_1$ in Series
+
+Finally:
+
+$$
+R_{\text{eq}} = R_1 + R_{2345} = 0.267 + 2.4 = 2.667 \, \Omega
+$$
+
+**Final equivalent resistance:**  
+**$R_{\text{eq}} = 2.667 \Omega$**
 
 ---
 
 ## Insight
 
-This process shows that:
-
-Different resistor combinations can be **equivalent**, as long as we correctly adjust the values and structure.
-
-This is exactly what **graph-based circuit analysis** helps us do — systematically simplify and compare circuits.
+This process shows how different resistor configurations — even when visually complex — can be **systematically reduced** using basic parallel and series rules. This is a core principle in **graph-based circuit analysis**, which allows us to simplify, analyze, and redesign circuits efficiently.
 
 ---
 
-Python implementations are in [Collab](https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing)
+## Visual Circuit Steps
 
   ![alt text](step1.png)
 
@@ -94,3 +92,5 @@ Python implementations are in [Collab](https://colab.research.google.com/drive/1
  ![alt text](step4.png)
 
  ![alt text](final.png)
+ 
+ Python implementations are in [Collab](https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing)
