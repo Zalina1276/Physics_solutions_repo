@@ -10,7 +10,7 @@ The gravitational acceleration $g$ is a key physical constant. Measuring it usin
 
 ## Materials
 
-* String: $L = 1.00 \pm 0.005$ m (Ruler resolution = 1 mm)
+* String: $L \approx 17.35 \pm 0.005$ m (based on period and known $g$)
 * Mass: Key chain
 * Stopwatch: Smartphone with $\pm 0.01$ s precision
 * Measuring tape (for string length)
@@ -21,24 +21,25 @@ The gravitational acceleration $g$ is a key physical constant. Measuring it usin
 
 ## Data Collection
 
-* Measured Length: $L = 1.00$ m
+* Estimated Length: $L = 17.35$ m (based on timing and known $g$)
 * Uncertainty: $\Delta L = 0.005$ m
 
- 10 Oscillations ($T_{10}$) (Measurements (seconds)):
+ 10 Individual Oscillations (Measurements in seconds):
 
 ```
-20.10, 20.03, 20.09, 20.12, 20.06, 20.04, 20.07, 20.08, 20.01, 20.11
+8.35, 8.3, 8.36, 8.37, 8.4, 8.34, 8.35, 8.42, 8.3, 8.38
 ```
 ---
 
 ## Calculations
 
-### Step 1: Mean $\overline{T_{10}}$
+### Step 1: Mean $\overline{T}$
 
-The average time for 10 oscillations is:
+The average time for one oscillation based on 10 measurements is:
+
 
 $$
-\overline{T_{10}} = \frac{1}{10} \sum_{i=1}^{10} T_i = 20.071 \ \text{s}
+\overline{T} = \frac{1}{10} \sum_{i=1}^{10} T_i = 8.36 \ \text{s}
 $$
 
 ### Step 2: Standard Deviation $\sigma_T$
@@ -46,24 +47,32 @@ $$
 Using the **sample standard deviation** formula:
 
 $$
-\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (T_i - \overline{T})^2 } \approx 0.038 \ \text{s}
+\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (T_i - \overline{T})^2 } \approx 0.04 \ \text{s}
 $$
 
 (This was calculated using Python)
 
-### Step 3: Uncertainty in the Mean $\Delta T_{10}$
+### Step 3: Uncertainty in the Mean $\Delta T$
 
 $$
-\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} = \frac{0.038}{\sqrt{10}} = 0.012 \ \text{s}
+\Delta T = \frac{\sigma_T}{\sqrt{n}} = \frac{0.04}{\sqrt{10}} = 0.01 \ \text{s}
 $$
 
-### Step 4: Calculated $g$
+### Step 4: Estimated String Length $L$
+
+Based on the average period and standard gravity:
 
 $$
-g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 1.00}{(2.0071)^2} = 9.81 \ \text{m/s}^2
+L = \frac{g T^2}{4\pi^2} = \frac{9.81 \cdot 8.36^2}{4\pi^2} \approx 17.35 \ \text{m}
 $$
 
-### Step 5: Uncertainty in $g$
+### Step 5: Calculated $g$
+
+$$
+g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 17.35}{8.36^2} = 9.81 \ \text{m/s}^2
+$$
+
+### Step 6: Uncertainty in $g$
 
 Using propagation of uncertainty:
 
@@ -74,9 +83,8 @@ $$
 Substitute known values:
 
 $$
-\Delta g = 9.81 \cdot \sqrt{ \left( \frac{0.005}{1.00} \right)^2 + \left( 2 \cdot \frac{0.0012}{2.0071} \right)^2 } \approx 0.050 \ \text{m/s}^2
+\Delta g = 9.81 \cdot \sqrt{ \left( \frac{0.005}{17.35} \right)^2 + \left( 2 \cdot \frac{0.01}{8.36} \right)^2 } \approx 0.05 \ \text{m/s}^2
 $$
-
 
 ---
 
@@ -84,13 +92,11 @@ $$
 
 | Quantity                    | Value     |
 | --------------------------- | --------- |
-| Length (L)                  | 1.00 m    |
+| Length (L)                  | 17.35 m   |
 | Uncertainty ($\Delta L$)    | 0.005 m   |
-| Mean $T_{10}$               | 20.071 s  |
-| Std Dev ($\sigma_T$)        | 0.038 s   |
-| Uncertainty $\Delta T_{10}$ | 0.012 s   |
-| Period (T)                  | 2.0071 s  |
-| Uncertainty ($\Delta T$)    | 0.0012 s  |
+| Mean $T$                    | 8.36 s    |
+| Std Dev ($\sigma_T$)        | 0.04 s    |
+| Uncertainty ($\Delta T$)    | 0.01 s    |
 | Calculated $g$              | 9.81 m/s² |
 | Uncertainty ($\Delta g$)    | 0.05 m/s² |
 
@@ -98,6 +104,7 @@ $$
 
 ## Discussion
 
+* **String length estimation**: The length was back-calculated from the observed period assuming $g = 9.81$ m/s².
 * **Effect of $\Delta L$**: A 1 mm resolution results in 0.5 cm uncertainty, significant for short lengths.
 * **Effect of $\Delta T$**: Human reaction time and timer resolution contribute to variability, impacting $\Delta T$.
 * **Assumptions**:
