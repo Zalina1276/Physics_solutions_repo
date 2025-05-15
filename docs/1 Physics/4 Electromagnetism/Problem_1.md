@@ -69,7 +69,9 @@ $$ a = \frac{dv}{dt}=\frac{q}{m}(E + v * B) $$
 
 We use the **Runge-Kutta 4th Order** to solve these differential equations numerically.
 
-![alt text](output.png)
+![alt text](image-3.png)
+
+The particle moves in a straight line — that's because the initial velocity is entirely along the x-axis, and the Lorentz force isn’t strong enough to bend it noticeably in the short simulated time.
 
 ---
 
@@ -92,6 +94,8 @@ $$
 
 The Lorentz force plays a pivotal role in charged particle dynamics. Simulating motion under various field configurations demonstrates critical physics phenomena and has direct applications in devices like cyclotrons and plasma traps.
 
-![alt text](lorentz_force.gif)
+![alt text](circular_motion.gif)
+
+![alt text](<drift_motion (1).gif>)
 
 All Python plots are in [Collab](https://colab.research.google.com/drive/1aYcXxmB-A7YCJaSx7A2MY1Te8fAtZvtX?usp=sharing)
