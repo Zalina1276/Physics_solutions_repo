@@ -29,8 +29,6 @@ governs the dynamics of charged particles in electromagnetic fields. This force 
 * Magnetic fields cause circular or helical motion depending on the angle of the velocity vector.
 * Crossed $\vec{E}$ and $\vec{B}$ fields produce **drift motion** (e.g., $\vec{v}_\text{drift} = \frac{\vec{E} \times \vec{B}}{B^2}$).
 
-![alt text](image.png)
-
 ---
 
 ## 2. Simulating Particle Motion
@@ -68,8 +66,6 @@ $$ a = \frac{dv}{dt}=\frac{q}{m}(E + v * B) $$
 ### Numerical Method
 
 We use the **Runge-Kutta 4th Order** to solve these differential equations numerically.
-
-![alt text](image-3.png)
 
 The particle moves in a straight line — that's because the initial velocity is entirely along the x-axis, and the Lorentz force isn’t strong enough to bend it noticeably in the short simulated time.
 
