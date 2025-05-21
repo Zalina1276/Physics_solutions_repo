@@ -90,8 +90,9 @@ $$
 
 The Lorentz force plays a pivotal role in charged particle dynamics. Simulating motion under various field configurations demonstrates critical physics phenomena and has direct applications in devices like cyclotrons and plasma traps.
 
-![alt text](<drift_motion (1).gif>)
+![alt text](helical_motion_full.gif)
 
-<video controls src="helical_motion_full.mp4" title="Title"></video>
+![alt text](correct_exb_drift.gif)
+
 
 All Python plots are in [Collab](https://colab.research.google.com/drive/1aYcXxmB-A7YCJaSx7A2MY1Te8fAtZvtX?usp=sharing)
