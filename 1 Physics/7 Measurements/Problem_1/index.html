@@ -178,54 +178,67 @@
 <hr/>
 <h2 id="materials">Materials</h2>
 <ul>
-<li>String: <span class="arithmatex">\(L \approx 17.35 \pm 0.005\)</span> m (based on period and known <span class="arithmatex">\(g\)</span>)</li>
-<li>Mass: Key chain</li>
-<li>Stopwatch: Smartphone with <span class="arithmatex">\(\pm 0.01\)</span> s precision</li>
+<li>
+<p>String: <span class="arithmatex">\(L= 15cm = 0.15m\)</span></p>
+</li>
+<li>
+<p>Mass: Key chain</p>
+</li>
+<li>
+<p>Stopwatch: Smartphone</p>
+</li>
 </ul>
 <p><img alt="alt text" src="../swinging_kitty_only.gif"/></p>
 <hr/>
 <h2 id="data-collection">Data Collection</h2>
 <ul>
-<li>Estimated Length: <span class="arithmatex">\(L = 17.35\)</span> m (based on timing and known <span class="arithmatex">\(g\)</span>)</li>
-<li>Uncertainty: <span class="arithmatex">\(\Delta L = 0.005\)</span> m</li>
+<li>
+<p>Estimated Length: <span class="arithmatex">\(L = 0.15\)</span> m </p>
+</li>
+<li>
+<p>Uncertainty: <span class="arithmatex">\(\Delta L = 0.0005\)</span> m</p>
+</li>
 </ul>
-<p>10 Individual Oscillations (Measurements in seconds):</p>
-<pre><code>8.35, 8.3, 8.36, 8.37, 8.4, 8.34, 8.35, 8.42, 8.3, 8.38
+<p>10 full oscillations 10 times (measurements in seconds):</p>
+<pre><code>7.83, 7.86, 7.84, 7.88, 7.85, 7.87, 7.85, 7.83, 7.84, 7.86
 </code></pre>
 <hr/>
 <h2 id="calculations">Calculations</h2>
 <h3 id="step-1-mean-overlinet">Step 1: Mean <span class="arithmatex">\(\overline{T}\)</span></h3>
-<p>The average time for one oscillation based on 10 measurements is:</p>
 <div class="arithmatex">\[
-\overline{T} = \frac{1}{10} \sum_{i=1}^{10} T_i = 8.36 \ \text{s}
+\overline{T_{10}} = \frac{1}{10} \sum_{i=1}^{10} T_{10,i} = 7.851 \ \text{s}
 \]</div>
 <h3 id="step-2-standard-deviation-sigma_t">Step 2: Standard Deviation <span class="arithmatex">\(\sigma_T\)</span></h3>
-<p>Using the <strong>sample standard deviation</strong> formula:</p>
 <div class="arithmatex">\[
-\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} (T_i - \overline{T})^2 } \approx 0.04 \ \text{s}
+\sigma_T = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^n (T_{10,i} - \overline{T_{10}})^2 } = 0.0174 \ \text{s}
 \]</div>
-<p>(This was calculated using Python)</p>
 <h3 id="step-3-uncertainty-in-the-mean-delta-t">Step 3: Uncertainty in the Mean <span class="arithmatex">\(\Delta T\)</span></h3>
 <div class="arithmatex">\[
-\Delta T = \frac{\sigma_T}{\sqrt{n}} = \frac{0.04}{\sqrt{10}} = 0.01 \ \text{s}
+\Delta T_{10} = \frac{\sigma_T}{\sqrt{n}} = \frac{0.0174}{\sqrt{10}} = 0.0055 \ \text{s}
 \]</div>
-<h3 id="step-4-estimated-string-length-l">Step 4: Estimated String Length <span class="arithmatex">\(L\)</span></h3>
-<p>Based on the average period and standard gravity:</p>
+<h3 id="step-4-period-of-one-swing">Step 4: Period of one swing:</h3>
 <div class="arithmatex">\[
-L = \frac{g T^2}{4\pi^2} = \frac{9.81 \cdot 8.36^2}{4\pi^2} \approx 17.35 \ \text{m}
+T = \frac{\overline{T_{10}}}{10} = \frac{7.851}{10} = 0.7851 \ \text{s}
 \]</div>
-<h3 id="step-5-calculated-g">Step 5: Calculated <span class="arithmatex">\(g\)</span></h3>
+<h3 id="step-5-uncertainty-in-period">Step 5: Uncertainty in period:</h3>
 <div class="arithmatex">\[
-g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 17.35}{8.36^2} = 9.81 \ \text{m/s}^2
+\Delta T = \frac{\Delta T_{10}}{10} = \frac{0.0055}{10} = 0.00055 \ \text{s}
 \]</div>
-<h3 id="step-6-uncertainty-in-g">Step 6: Uncertainty in <span class="arithmatex">\(g\)</span></h3>
+<h3 id="step-6-calculated-g">Step 6: Calculated <span class="arithmatex">\(g\)</span></h3>
+<div class="arithmatex">\[
+g = \frac{4\pi^2 L}{T^2} = \frac{4 \cdot \pi^2 \cdot 0.15}{(0.7851)^2}
+\]</div>
+<div class="arithmatex">\[
+g = \frac{5.92176}{0.6164} = 9.616 \ \text{m/s}^2
+\]</div>
+<h3 id="step-7-uncertainty-in-g">Step 7: Uncertainty in <span class="arithmatex">\(g\)</span></h3>
 <p>Using propagation of uncertainty:</p>
 <div class="arithmatex">\[
 \Delta g = g \cdot \sqrt{ \left( \frac{\Delta L}{L} \right)^2 + \left( 2 \cdot \frac{\Delta T}{T} \right)^2 }
 \]</div>
-<p>Substitute known values:</p>
 <div class="arithmatex">\[
-\Delta g = 9.81 \cdot \sqrt{ \left( \frac{0.005}{17.35} \right)^2 + \left( 2 \cdot \frac{0.01}{8.36} \right)^2 } \approx 0.05 \ \text{m/s}^2
+\Delta g = 9.616 \cdot \sqrt{ \left( \frac{0.0005}{0.15} \right)^2 + \left( 2 \cdot \frac{0.00055}{0.7851} \right)^2 }
+= 9.616 \cdot 0.00361 = 0.035 \ \text{m/s}^2
 \]</div>
 <hr/>
 <h2 id="final-results">Final Results</h2>
@@ -239,50 +252,59 @@ g = \frac{4\pi^2 L}{T^2} = \frac{4\pi^2 \cdot 17.35}{8.36^2} = 9.81 \ \text{m/s}
 <tbody>
 <tr>
 <td>Length (L)</td>
-<td>17.35 m</td>
+<td>0.15 m</td>
 </tr>
 <tr>
 <td>Uncertainty (<span class="arithmatex">\(\Delta L\)</span>)</td>
-<td>0.005 m</td>
+<td>0.0005 m</td>
 </tr>
 <tr>
 <td>Mean <span class="arithmatex">\(T\)</span></td>
-<td>8.36 s</td>
+<td>7.851s</td>
 </tr>
 <tr>
 <td>Std Dev (<span class="arithmatex">\(\sigma_T\)</span>)</td>
-<td>0.04 s</td>
+<td>0.0174 s</td>
 </tr>
 <tr>
 <td>Uncertainty (<span class="arithmatex">\(\Delta T\)</span>)</td>
-<td>0.01 s</td>
+<td>0.00055 s</td>
 </tr>
 <tr>
 <td>Calculated <span class="arithmatex">\(g\)</span></td>
-<td>9.81 m/s²</td>
+<td>9.616 m/s²</td>
 </tr>
 <tr>
 <td>Uncertainty (<span class="arithmatex">\(\Delta g\)</span>)</td>
-<td>0.05 m/s²</td>
+<td>0.035 m/s²</td>
 </tr>
 </tbody>
 </table>
 <hr/>
 <h2 id="discussion">Discussion</h2>
 <ul>
-<li><strong>String length estimation</strong>: The length was back-calculated from the observed period assuming <span class="arithmatex">\(g = 9.81\)</span> m/s².</li>
-<li><strong>Effect of <span class="arithmatex">\(\Delta L\)</span></strong>: A 1 mm resolution results in 0.5 cm uncertainty, significant for short lengths.</li>
-<li><strong>Effect of <span class="arithmatex">\(\Delta T\)</span></strong>: Human reaction time and timer resolution contribute to variability, impacting <span class="arithmatex">\(\Delta T\)</span></li>
+<li><strong>Comparison to standard gravity</strong>:  </li>
+</ul>
+<p>The standard value of <span class="arithmatex">\(g\)</span> is <span class="arithmatex">\(9.81 \ \text{m/s}^2\)</span>. Our measured value is <span class="arithmatex">\(9.616 \ \text{m/s}^2\)</span>, which is slightly lower. This could result from timing delay, air resistance, or local gravity variations.</p>
+<ul>
+<li><strong>Effect of <span class="arithmatex">\(\Delta L\)</span></strong>:  </li>
+</ul>
+<p>The uncertainty in length came from the ruler's resolution (1 mm), giving <span class="arithmatex">\(\Delta L = 0.0005\)</span> m. Although small, it still contributes to the total uncertainty.</p>
+<ul>
+<li><strong>Effect of timing on <span class="arithmatex">\(\Delta T\)</span></strong>:  </li>
+</ul>
+<p>Using a manual stopwatch introduces human reaction time. The standard deviation across trials shows some variability, highlighting the importance of precise timing.</p>
+<ul>
 <li>
 <p><strong>Assumptions</strong>:</p>
 </li>
 <li>
-<p>Small angle approximation (<span class="arithmatex">\(\theta &lt; 15^\circ\)</span>)</p>
+<p>Small angle approximation was valid (displacement &lt;15°).</p>
 </li>
-<li>Negligible air resistance and massless string</li>
-<li><strong>Comparison with Standard</strong>: Measured <span class="arithmatex">\(g = 9.81 \pm 0.05\)</span> m/s² closely matches accepted value (9.80665 m/s²).</li>
+<li>
+<p>Air resistance and friction were ignored.</p>
+</li>
 </ul>
-<p>This experiment reinforces the importance of precision and error analysis in physical measurements and highlights the robustness of simple harmonic motion principles in determining fundamental constants.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
