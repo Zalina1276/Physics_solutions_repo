@@ -13,4 +13,9 @@ To demonstrate how the **equivalent resistance** of a circuit evolves as we **re
 ![alt text](<step3 (3).png>) 
 ![alt text](<step4 (4).png>) 
 
+### Details of the computations and highlights
+
+![alt text](image.png)
+
+
  Python implementations are in [Collab](https://colab.research.google.com/drive/12GTBwiNby3IxKENQUjtxPdjeVxnk3_vg?usp=sharing)
